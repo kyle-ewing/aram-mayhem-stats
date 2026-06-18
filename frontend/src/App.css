@@ -1,0 +1,535 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  color: #9a9aa5;
+}
+
+/* ---- Status messages ---- */
+.status {
+  margin-top: 1.5rem;
+  color: #9a9aa5;
+}
+
+.status.error {
+  color: #ff7a7a;
+  background: #2a1a1d;
+  border: 1px solid #4a2429;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.muted {
+  color: #9a9aa5;
+  font-size: 0.9rem;
+}
+
+/* ---- Empty / cold start states ---- */
+.empty-state {
+  margin-top: 2rem;
+  background: #1d1d26;
+  border: 1px solid #2c2c38;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.empty-state.inline {
+  margin: 1.25rem 0;
+}
+
+.empty-state h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #9a9aa5;
+}
+
+.empty {
+  color: #9a9aa5;
+  padding: 1rem 0;
+}
+
+/* ---- Champion grid ---- */
+.grid-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1 1 240px;
+  background: #14141a;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  color: #e8e8ea;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #5b6cff;
+}
+
+.champion-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.champion-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1d1d26;
+  border: 1px solid #2c2c38;
+  border-radius: 10px;
+  padding: 0.7rem;
+  color: #e8e8ea;
+  cursor: pointer;
+  text-align: left;
+}
+
+.champion-card:hover {
+  border-color: #5b6cff;
+  background: #21212c;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.card-name {
+  font-weight: 600;
+  flex: 1 1 auto;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  flex: 0 0 auto;
+}
+
+.wr {
+  font-weight: 600;
+}
+
+.wr.low {
+  color: #c9a227;
+}
+
+.wr.big {
+  font-size: 1.3rem;
+}
+
+/* ---- Champion detail ---- */
+.back-button {
+  background: none;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  color: #c9ccd6;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.back-button:hover {
+  border-color: #5b6cff;
+  color: #e8e8ea;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  display: block;
+}
+
+.detail-header h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.6rem;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.augment-section {
+  margin-top: 1rem;
+}
+
+.augment-section h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+/* ---- Tables ---- */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin-top: 0.75rem;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 0.55rem 0.6rem;
+  text-align: center;
+  border-bottom: 1px solid #2c2c38;
+}
+
+.stats-table th {
+  color: #9a9aa5;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stats-table .left {
+  text-align: left;
+}
+
+.stats-table tbody tr:hover {
+  background: #1d1d26;
+}
+
+.augment-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.augment-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: block;
+}
+
+.augment-name {
+  flex: 1 1 auto;
+}
+
+/* ---- Rarity badges ---- */
+.rarity-badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+}
+
+.rarity-silver {
+  color: #c9ccd6;
+  background: #2c2c38;
+  border-color: #3c3c4a;
+}
+
+.rarity-gold {
+  color: #f2c94c;
+  background: #34301c;
+  border-color: #5a5023;
+}
+
+.rarity-prismatic {
+  color: #7fe0ff;
+  background: #1c2c34;
+  border-color: #2a5a6a;
+}
+
+/* ---- Synergy notes ---- */
+.synergy-notes {
+  margin-top: 2.5rem;
+}
+
+.synergy-notes h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.synergy-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.synergy-item {
+  background: #1d1d26;
+  border: 1px solid #2c2c38;
+  border-left: 3px solid #5b6cff;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+.synergy-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.synergy-augment {
+  font-weight: 600;
+}
+
+.synergy-text {
+  margin: 0 0 0.4rem;
+  color: #d6d6de;
+}
+
+.synergy-source {
+  font-size: 0.8rem;
+  color: #7f9bff;
+}
+
+/* ---- Footer / provenance ---- */
+.app-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #2c2c38;
+}
+
+.provenance {
+  margin: 0;
+  color: #8a8a95;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* ---- Top navigation ---- */
+.app-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-link {
+  background: #1d1d26;
+  border: 1px solid #2c2c38;
+  border-radius: 8px;
+  color: #c9ccd6;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  border-color: #5b6cff;
+  color: #e8e8ea;
+}
+
+.nav-link.active {
+  border-color: #5b6cff;
+  background: #21212c;
+  color: #e8e8ea;
+}
+
+/* ---- Augment manager page ---- */
+.augment-manager h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.augment-manager h3 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.augment-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.9rem;
+  background: #1d1d26;
+  border: 1px solid #2c2c38;
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.augment-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.augment-form .field-wide {
+  grid-column: 1 / -1;
+}
+
+.augment-form label {
+  color: #9a9aa5;
+  font-size: 0.82rem;
+}
+
+.augment-form input,
+.augment-form select,
+.augment-form textarea {
+  background: #14141a;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  color: #e8e8ea;
+  font: inherit;
+}
+
+.augment-form input:focus,
+.augment-form select:focus,
+.augment-form textarea:focus {
+  outline: none;
+  border-color: #5b6cff;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-actions button {
+  background: #5b6cff;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.form-ok {
+  color: #6bd49a;
+  font-size: 0.9rem;
+}
+
+.form-err {
+  color: #ff7a7a;
+  font-size: 0.9rem;
+}
+
+.augment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.augment-table th,
+.augment-table td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #2c2c38;
+  vertical-align: top;
+}
+
+.augment-table th {
+  color: #9a9aa5;
+  font-weight: 600;
+}
+
+.augment-table tbody tr:hover {
+  background: #1d1d26;
+}
+
+.augment-table input,
+.augment-table select {
+  background: #14141a;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  padding: 0.35rem 0.45rem;
+  color: #e8e8ea;
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.augment-table input:focus,
+.augment-table select:focus {
+  outline: none;
+  border-color: #5b6cff;
+}
+
+.augment-table .id-input {
+  max-width: 8rem;
+}
+
+.augment-table tr.editing td {
+  background: #1d1d26;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-actions button {
+  background: #5b6cff;
+  border: 1px solid #5b6cff;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.row-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.row-actions .link-button {
+  background: none;
+  border-color: #2c2c38;
+  color: #c9ccd6;
+}
+
+.row-actions .link-button:hover:not(:disabled) {
+  border-color: #5b6cff;
+  color: #e8e8ea;
+}

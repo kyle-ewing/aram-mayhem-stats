@@ -1,0 +1,187 @@
+{
+  "gameId": 1234567890,
+  "queueId": 2400,
+  "gameMode": "ARAM",
+  "gameType": "MATCHED_GAME",
+  "gameVersion": "26.12.123.4567",
+  "gameCreation": 1718700000000,
+  "gameDuration": 1234,
+  "mapId": 12,
+  "participantIdentities": [
+    { "participantId": 1, "player": { "puuid": "puuid-1", "gameName": "PlayerOne", "tagLine": "NA1", "summonerName": "PlayerOne" } },
+    { "participantId": 2, "player": { "puuid": "puuid-2", "gameName": "PlayerTwo", "tagLine": "NA1", "summonerName": "PlayerTwo" } },
+    { "participantId": 3, "player": { "puuid": "puuid-3", "gameName": "PlayerThree", "tagLine": "NA1", "summonerName": "PlayerThree" } },
+    { "participantId": 4, "player": { "puuid": "puuid-4", "gameName": "PlayerFour", "tagLine": "NA1", "summonerName": "PlayerFour" } },
+    { "participantId": 5, "player": { "puuid": "puuid-5", "gameName": "PlayerFive", "tagLine": "NA1", "summonerName": "PlayerFive" } },
+    { "participantId": 6, "player": { "puuid": "puuid-6", "gameName": "PlayerSix", "tagLine": "EUW", "summonerName": "PlayerSix" } },
+    { "participantId": 7, "player": { "puuid": "puuid-7", "gameName": "PlayerSeven", "tagLine": "EUW", "summonerName": "PlayerSeven" } },
+    { "participantId": 8, "player": { "puuid": "puuid-8", "gameName": "PlayerEight", "tagLine": "EUW", "summonerName": "PlayerEight" } },
+    { "participantId": 9, "player": { "puuid": "puuid-9", "gameName": "PlayerNine", "tagLine": "EUW", "summonerName": "PlayerNine" } },
+    { "participantId": 10, "player": { "puuid": "puuid-10", "gameName": "PlayerTen", "tagLine": "EUW", "summonerName": "PlayerTen" } }
+  ],
+  "participants": [
+    {
+      "participantId": 1,
+      "championId": 64,
+      "teamId": 100,
+      "spell1Id": 4,
+      "spell2Id": 32,
+      "stats": {
+        "win": true,
+        "kills": 12,
+        "deaths": 4,
+        "assists": 8,
+        "totalDamageDealtToChampions": 23456,
+        "totalDamageDealt": 99999,
+        "playerAugment1": 101,
+        "playerAugment2": 207,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 2,
+      "championId": 103,
+      "teamId": 100,
+      "stats": {
+        "win": true,
+        "kills": 7,
+        "deaths": 6,
+        "assists": 15,
+        "totalDamageDealtToChampions": 18900,
+        "playerAugment1": 110,
+        "playerAugment2": 0,
+        "playerAugment3": 305,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 3,
+      "championId": 1,
+      "teamId": 100,
+      "stats": {
+        "win": true,
+        "kills": 3,
+        "deaths": 9,
+        "assists": 21,
+        "totalDamageDealtToChampions": 14200,
+        "playerAugment1": 0,
+        "playerAugment2": 0,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 4,
+      "championId": 412,
+      "teamId": 100,
+      "stats": {
+        "win": true,
+        "kills": 1,
+        "deaths": 7,
+        "assists": 24,
+        "totalDamageDealtToChampions": 6500,
+        "playerAugment1": 401,
+        "playerAugment2": 402,
+        "playerAugment3": 403,
+        "playerAugment4": 404
+      }
+    },
+    {
+      "participantId": 5,
+      "championId": 81,
+      "teamId": 100,
+      "stats": {
+        "win": true,
+        "kills": 18,
+        "deaths": 5,
+        "assists": 6,
+        "totalDamageDealtToChampions": 31200,
+        "playerAugment1": 501,
+        "playerAugment2": 0,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 6,
+      "championId": 238,
+      "teamId": 200,
+      "stats": {
+        "win": false,
+        "kills": 9,
+        "deaths": 8,
+        "assists": 7,
+        "totalDamageDealtToChampions": 27800,
+        "playerAugment1": 601,
+        "playerAugment2": 602,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 7,
+      "championId": 99,
+      "teamId": 200,
+      "stats": {
+        "win": false,
+        "kills": 6,
+        "deaths": 10,
+        "assists": 11,
+        "totalDamageDealtToChampions": 22100,
+        "playerAugment1": 701,
+        "playerAugment2": 0,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 8,
+      "championId": 555,
+      "teamId": 200,
+      "stats": {
+        "win": false,
+        "kills": 4,
+        "deaths": 11,
+        "assists": 13,
+        "totalDamageDealtToChampions": 9800,
+        "playerAugment1": 0,
+        "playerAugment2": 801,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 9,
+      "championId": 89,
+      "teamId": 200,
+      "stats": {
+        "win": false,
+        "kills": 2,
+        "deaths": 9,
+        "assists": 18,
+        "totalDamageDealtToChampions": 7400,
+        "playerAugment1": 0,
+        "playerAugment2": 0,
+        "playerAugment3": 0,
+        "playerAugment4": 0
+      }
+    },
+    {
+      "participantId": 10,
+      "championId": 360,
+      "teamId": 200,
+      "stats": {
+        "win": false,
+        "kills": 14,
+        "deaths": 7,
+        "assists": 5,
+        "totalDamageDealtToChampions": 29500,
+        "playerAugment1": 1001,
+        "playerAugment2": 1002,
+        "playerAugment3": 1003,
+        "playerAugment4": 0
+      }
+    }
+  ]
+}

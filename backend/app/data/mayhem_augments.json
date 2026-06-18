@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Spin To Win",
+    "tier": "Silver",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Marksmage",
+    "tier": "Gold",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Back To Basics",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Courage of the Colossus",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Dual Wield",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Fan The Hammer",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Infernal Conduit",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Multishot",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Quest: Wooglet's Witchcap",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Stackasaurus",
+    "tier": "Prismatic",
+    "id": null,
+    "notes": ""
+  },
+  {
+    "name": "Giant Slayer",
+    "tier": "Prismatic",
+    "id": 1356,
+    "notes": ""
+  },
+  {
+    "name": "Crit 'n Cast",
+    "tier": "Silver",
+    "id": 1195,
+    "notes": ""
+  },
+  {
+    "name": "Deft",
+    "tier": "Silver",
+    "id": 1022,
+    "notes": ""
+  },
+  {
+    "name": "Critical Missile",
+    "tier": "Gold",
+    "id": 2024,
+    "notes": ""
+  }
+]

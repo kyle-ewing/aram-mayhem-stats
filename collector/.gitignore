@@ -1,0 +1,4 @@
+node_modules/
+seen.json
+seen.json.tmp
+*.log

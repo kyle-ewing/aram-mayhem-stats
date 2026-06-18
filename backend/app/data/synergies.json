@@ -1,0 +1,146 @@
+[
+  {
+    "champion": "Brand",
+    "championId": "Brand",
+    "augment": "Infernal Conduit",
+    "rarity": "Prismatic",
+    "note": "Each burn tick cuts all of Brand's cooldowns by 0.08s, and his W, E, and passive spread burn to the whole enemy team, driving his abilities toward near-zero cooldown for relentless AoE.",
+    "source": "https://arammayhem.com/combo/brand-infernal-conduit/"
+  },
+  {
+    "champion": "Cassiopeia",
+    "championId": "Cassiopeia",
+    "augment": "Infernal Conduit",
+    "rarity": "Prismatic",
+    "note": "Cassiopeia's Twin Fang spam plus her own poison keeps burn ticking constantly, and every tick refunds ability cooldown so she can chain casts almost without pause.",
+    "source": "https://arammayhem.com/augments/infernal-conduit/"
+  },
+  {
+    "champion": "Lillia",
+    "championId": "Lillia",
+    "augment": "Infernal Conduit",
+    "rarity": "Prismatic",
+    "note": "Lillia's passive burn and AoE Q apply multiple burn instances across a teamfight, and each tick refunds cooldown, snowballing her spell uptime.",
+    "source": "https://arammayhem.com/augments/infernal-conduit/"
+  },
+  {
+    "champion": "Hwei",
+    "championId": "Hwei",
+    "augment": "Infernal Conduit",
+    "rarity": "Prismatic",
+    "note": "Hwei's sustained AoE damage-over-time zones keep burn ticking on grouped enemies, and the per-tick cooldown refund lets him cycle his large spell menu faster.",
+    "source": "https://arammayhem.com/augments/infernal-conduit/"
+  },
+  {
+    "champion": "Annie",
+    "championId": "Annie",
+    "augment": "Back To Basics",
+    "rarity": "Prismatic",
+    "note": "Annie's burst lives in her basic abilities, so +35% ability damage and 70 haste massively boost her Q and W spam; sealing her ult costs Tibbers, so it is a damage gamble best paired with a defensive summoner backup.",
+    "source": "https://arammayhem.com/augments/back-to-basics/"
+  },
+  {
+    "champion": "Lux",
+    "championId": "Lux",
+    "augment": "Multishot",
+    "rarity": "Prismatic",
+    "note": "Multishot splits Lux's Light Binding to extra enemies in front of her, letting one Q snare most of the enemy team for follow-up burst.",
+    "source": "https://arammayhem.com/augments/multishot/"
+  },
+  {
+    "champion": "Blitzcrank",
+    "championId": "Blitzcrank",
+    "augment": "Multishot",
+    "rarity": "Prismatic",
+    "note": "Multishot fires extra Rocket Grabs at additional enemies in front, turning a single hook into a multi-target catch in the single-lane ARAM scrum.",
+    "source": "https://arammayhem.com/augments/multishot/"
+  },
+  {
+    "champion": "Veigar",
+    "championId": "Veigar",
+    "augment": "Stackasaurus",
+    "rarity": "Prismatic",
+    "note": "Stackasaurus immediately unlocks the stack-scaling payoff, accelerating Veigar's infinite AP stacking so his per-cast burst ramps far earlier in the game.",
+    "source": "https://arammayhem.com/patch/26-12/"
+  },
+  {
+    "champion": "Senna",
+    "championId": "Senna",
+    "augment": "Stackasaurus",
+    "rarity": "Prismatic",
+    "note": "Senna already gains permanent AD, range, and crit from souls; front-loading her stack scaling with Stackasaurus turbocharges that growth so she out-scales the lobby sooner.",
+    "source": "https://arammayhem.com/patch/26-12/"
+  },
+  {
+    "champion": "Sett",
+    "championId": "Sett",
+    "augment": "Spin To Win",
+    "rarity": "Silver",
+    "note": "Spin To Win grants +30 ability haste and +30% damage to spin abilities, boosting Sett's W Haymaker and other spin-pattern damage for cheap value at Silver rarity.",
+    "source": "https://wiki.leagueoflegends.com/en-us/ARAM:_Mayhem/Augments"
+  },
+  {
+    "champion": "Sion",
+    "championId": "Sion",
+    "augment": "Courage of the Colossus",
+    "rarity": "Prismatic",
+    "note": "Immobilizing an enemy grants a shield scaling with max health; Sion's Q knockup and E wall-stun proc it reliably, and his enormous HP pool makes each shield huge.",
+    "source": "https://arammayhem.com/augments/courage-of-the-colossus/"
+  },
+  {
+    "champion": "Twisted Fate",
+    "championId": "TwistedFate",
+    "augment": "Marksmage",
+    "rarity": "Gold",
+    "note": "Marksmage adds physical damage equal to 75% AP to basic attacks, bridging TF's AP scaling onto his autos so his blue and red card weaving and auto-resets both hit hard.",
+    "source": "https://arammayhem.com/augments/marksmage/"
+  },
+  {
+    "champion": "Hwei",
+    "championId": "Hwei",
+    "augment": "Quest: Wooglet's Witchcap",
+    "rarity": "Prismatic",
+    "note": "Completing the quest fuses Rabadon's and Zhonya's into Wooglet's for a large AP spike plus a Zhonya's active, rewarding Hwei's heavy single-cast burst and giving him a stasis to survive dives.",
+    "source": "https://arammayhem.com/augments/quest-wooglets-witchcap/"
+  },
+  {
+    "champion": "Yasuo",
+    "championId": "Yasuo",
+    "augment": "Fan The Hammer",
+    "rarity": "Prismatic",
+    "note": "Yasuo builds toward 100% crit, and Fan the Hammer's bolts each crit and apply on-hit, so his already crit-capped autos become multi-bolt crit volleys.",
+    "source": "https://arammayhem.com/augments/fan-the-hammer/"
+  },
+  {
+    "champion": "Caitlyn",
+    "championId": "Caitlyn",
+    "augment": "Fan The Hammer",
+    "rarity": "Prismatic",
+    "note": "Caitlyn's long-range crit autos pair perfectly with Fan the Hammer's directional bolts that each can crit for big extra physical damage, amplifying her poke and burst.",
+    "source": "https://arammayhem.com/augments/fan-the-hammer/"
+  },
+  {
+    "champion": "Yone",
+    "championId": "Yone",
+    "augment": "Dual Wield",
+    "rarity": "Prismatic",
+    "note": "Dual Wield fires an extra bolt dealing 40% of the attack and applying on-hit at 40% plus +20% attack speed; Yone weaves crit autos between Q dashes, so the bonus bolts scale with his AD and crit.",
+    "source": "https://arammayhem.com/augments/dual-wield/"
+  },
+  {
+    "champion": "Master Yi",
+    "championId": "MasterYi",
+    "augment": "Dual Wield",
+    "rarity": "Prismatic",
+    "note": "Master Yi is a pure on-hit auto-attacker; Dual Wield's extra on-hit bolt and +20% attack speed compound directly with his Wuju Style and E true damage for massive single-target DPS.",
+    "source": "https://arammayhem.com/augments/dual-wield/"
+  },
+  {
+    "champion": "Kog'Maw",
+    "championId": "KogMaw",
+    "augment": "Dual Wield",
+    "rarity": "Prismatic",
+    "note": "Kog'Maw's W converts attacks into percent-health on-hit damage; Dual Wield's extra on-hit bolt and attack-speed boost stack with that to melt frontline targets in sustained fights.",
+    "source": "https://arammayhem.com/augments/dual-wield/"
+  }
+]
