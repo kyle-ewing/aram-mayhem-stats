@@ -36,13 +36,22 @@
         "playerAugment1": 101,
         "playerAugment2": 207,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 3047,
+        "item1": 6692,
+        "item2": 3071,
+        "item3": 3133,
+        "item4": 1037,
+        "item5": 0,
+        "item6": 3340
       }
     },
     {
       "participantId": 2,
       "championId": 103,
       "teamId": 100,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": true,
         "kills": 7,
@@ -52,13 +61,22 @@
         "playerAugment1": 110,
         "playerAugment2": 0,
         "playerAugment3": 305,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 6655,
+        "item1": 3157,
+        "item2": 3020,
+        "item3": 4645,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3363
       }
     },
     {
       "participantId": 3,
       "championId": 1,
       "teamId": 100,
+      "spell1Id": 7,
+      "spell2Id": 4,
       "stats": {
         "win": true,
         "kills": 3,
@@ -68,13 +86,22 @@
         "playerAugment1": 0,
         "playerAugment2": 0,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 6653,
+        "item1": 3020,
+        "item2": 4628,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3340
       }
     },
     {
       "participantId": 4,
       "championId": 412,
       "teamId": 100,
+      "spell1Id": 4,
+      "spell2Id": 3,
       "stats": {
         "win": true,
         "kills": 1,
@@ -84,13 +111,22 @@
         "playerAugment1": 401,
         "playerAugment2": 402,
         "playerAugment3": 403,
-        "playerAugment4": 404
+        "playerAugment4": 404,
+        "item0": 3190,
+        "item1": 3107,
+        "item2": 3109,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3364
       }
     },
     {
       "participantId": 5,
       "championId": 81,
       "teamId": 100,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": true,
         "kills": 18,
@@ -100,13 +136,22 @@
         "playerAugment1": 501,
         "playerAugment2": 0,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 3508,
+        "item1": 6672,
+        "item2": 3046,
+        "item3": 3036,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3340
       }
     },
     {
       "participantId": 6,
       "championId": 238,
       "teamId": 200,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": false,
         "kills": 9,
@@ -116,13 +161,22 @@
         "playerAugment1": 601,
         "playerAugment2": 602,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 6699,
+        "item1": 3142,
+        "item2": 6694,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3340
       }
     },
     {
       "participantId": 7,
       "championId": 99,
       "teamId": 200,
+      "spell1Id": 4,
+      "spell2Id": 7,
       "stats": {
         "win": false,
         "kills": 6,
@@ -132,13 +186,22 @@
         "playerAugment1": 701,
         "playerAugment2": 0,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 6655,
+        "item1": 3157,
+        "item2": 3135,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3363
       }
     },
     {
       "participantId": 8,
       "championId": 555,
       "teamId": 200,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": false,
         "kills": 4,
@@ -148,13 +211,22 @@
         "playerAugment1": 0,
         "playerAugment2": 801,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 3179,
+        "item1": 6691,
+        "item2": 3158,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3340
       }
     },
     {
       "participantId": 9,
       "championId": 89,
       "teamId": 200,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": false,
         "kills": 2,
@@ -164,13 +236,22 @@
         "playerAugment1": 0,
         "playerAugment2": 0,
         "playerAugment3": 0,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 3001,
+        "item1": 3109,
+        "item2": 3047,
+        "item3": 0,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3364
       }
     },
     {
       "participantId": 10,
       "championId": 360,
       "teamId": 200,
+      "spell1Id": 4,
+      "spell2Id": 32,
       "stats": {
         "win": false,
         "kills": 14,
@@ -180,7 +261,14 @@
         "playerAugment1": 1001,
         "playerAugment2": 1002,
         "playerAugment3": 1003,
-        "playerAugment4": 0
+        "playerAugment4": 0,
+        "item0": 6673,
+        "item1": 3031,
+        "item2": 3072,
+        "item3": 3006,
+        "item4": 0,
+        "item5": 0,
+        "item6": 3340
       }
     }
   ]

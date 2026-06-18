@@ -34,6 +34,12 @@ async function processNewGames(ctx) {
         continue;
       }
 
+      if (payload.gameEndedInEarlySurrender) {
+        await seen.add(gameId);
+        console.log(`[collector] game ${gameId} was a remake; not uploading`);
+        continue;
+      }
+
       const { result, status } = await uploadMatch(config, payload);
       if (result === UploadResult.SUCCESS) {
         await seen.add(gameId);

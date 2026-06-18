@@ -99,6 +99,8 @@ Per participant (`participants[i]`):
 - `championId` (number): champion played. championName is NOT in the payload; resolve it from
   Data Dragon by `championId` (the reference resolves names client-side via Data Dragon).
 - `teamId` (number): 100 or 200.
+- `spell1Id`, `spell2Id` (number): the two summoner spell ids, on the participant object (not
+  inside `stats`). The collector copies them through as `summonerSpells: [spell1Id, spell2Id]`.
 - `stats` (object), the flattened stat block:
   - `win` (bool): per-participant win flag (equivalently derivable from the team result).
   - `kills`, `deaths`, `assists` (number).
@@ -107,6 +109,12 @@ Per participant (`participants[i]`):
   - `playerAugment1`, `playerAugment2`, `playerAugment3`, `playerAugment4` (number): augment
     ids. A value of `0` means "no augment in that slot". The reference reads slots 1..4 and
     keeps only positive ids.
+  - `item0`, `item1`, `item2`, `item3`, `item4`, `item5` (number): end-of-game inventory item
+    ids; `item6` (number) is the trinket. A value of `0` means an empty slot. The collector
+    reads all 7 slots positionally and keeps zeros (slot position is the point).
+  - `gameEndedInEarlySurrender` (bool): `true` when the game was a remake. Set on every
+    participant. The collector folds it into the single top-level payload flag of the same
+    name and does not upload remakes; the backend also refuses to store them.
 
 Augments: in the LCU match payload augments appear as the discrete integer fields
 `playerAugment1..4` inside `stats`, NOT as an array. The collector collapses them into an
@@ -152,7 +160,9 @@ and repeat POSTs of the same `gameId` return success without creating duplicates
       "deaths": 4,
       "assists": 8,
       "totalDamageDealtToChampions": 23456,
-      "augments": [101, 207, 0, 0]
+      "augments": [101, 207, 0, 0],
+      "items": [3047, 6692, 3071, 3133, 1037, 0, 3340],
+      "summonerSpells": [4, 32]
     }
   ]
 }
@@ -174,6 +184,7 @@ Top level:
 | `gameVersion`  | string  | no       | Raw full build string from the LCU, kept for audit. |
 | `gameCreation` | int     | no       | Epoch milliseconds. |
 | `gameDuration` | int     | no       | Seconds. |
+| `gameEndedInEarlySurrender` | bool | no | `true` if the game was a remake (Riot sets `gameEndedInEarlySurrender` on every participant). Collectors SHOULD omit it (or send `false`) for normal games. The backend NEVER stores a remake: it returns `200 {"status": "skipped"}` and writes nothing. |
 | `participants` | array   | yes      | Exactly 10 participant objects. |
 
 Per participant:
@@ -190,6 +201,8 @@ Per participant:
 | `assists`                      | int    | yes      | >= 0. |
 | `totalDamageDealtToChampions`  | int    | yes      | >= 0. |
 | `augments`                     | int[]  | yes      | Augment ids. Variable length. See normalization. |
+| `items`                        | int[]  | no       | End-of-game inventory: `item0..item5` plus the `item6` trinket, 7 slots in order. `0` is an empty slot; zeros are kept (slot position matters). Collected for later use; nothing reads it yet. |
+| `summonerSpells`               | int[]  | no       | The two summoner spell ids `[spell1Id, spell2Id]` from the participant object. Collected for later use; nothing reads it yet. |
 
 ### Normalization rules
 
@@ -213,8 +226,9 @@ Per participant:
 ### Responses
 
 - `201 Created`: new match stored.
-- `200 OK`: duplicate `gameId`, accepted idempotently, nothing changed. (The backend may use
-  either status; both indicate success. The collector treats 200 and 201 identically.)
+- `200 OK`: duplicate `gameId`, accepted idempotently, nothing changed; OR a remake
+  (`gameEndedInEarlySurrender`) that was deliberately not stored (`status: "skipped"`). The
+  collector treats 200 and 201 identically (success), so it stops re-sending the game.
 - `400 Bad Request`: schema validation failed (missing required field, wrong type, wrong
   participant count, wrong/disallowed `queueId`). Body is a JSON `ApiError` per the project
   error contract. Never echoes any secret.

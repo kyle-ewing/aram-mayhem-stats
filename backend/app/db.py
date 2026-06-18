@@ -10,6 +10,9 @@ synergy winrate queries):
 * ``matches``              one row per game, keyed on ``gameId`` for dedup.
 * ``participants``         ten rows per match (one per player), linked by gameId.
 * ``participant_augments`` zero-or-more rows per participant (one per augment id).
+* ``participant_loadouts`` one row per participant: end-of-game items (7 slots)
+                           and the two summoner spells. Collected for later use;
+                           nothing reads it yet.
 
 Foreign keys cascade on delete. ``init_db`` is idempotent and is called at app
 startup (and by tests against an in-memory or temp-file database).
@@ -53,6 +56,23 @@ CREATE TABLE IF NOT EXISTS participant_augments (
     FOREIGN KEY (participant_id) REFERENCES participants (id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS participant_loadouts (
+    participant_id INTEGER PRIMARY KEY,
+    gameId         INTEGER NOT NULL,
+    championId     INTEGER NOT NULL,
+    item0          INTEGER NOT NULL DEFAULT 0,
+    item1          INTEGER NOT NULL DEFAULT 0,
+    item2          INTEGER NOT NULL DEFAULT 0,
+    item3          INTEGER NOT NULL DEFAULT 0,
+    item4          INTEGER NOT NULL DEFAULT 0,
+    item5          INTEGER NOT NULL DEFAULT 0,
+    item6          INTEGER NOT NULL DEFAULT 0,
+    summoner1      INTEGER NOT NULL DEFAULT 0,
+    summoner2      INTEGER NOT NULL DEFAULT 0,
+    FOREIGN KEY (participant_id) REFERENCES participants (id) ON DELETE CASCADE,
+    FOREIGN KEY (gameId) REFERENCES matches (gameId) ON DELETE CASCADE
+);
+
 CREATE INDEX IF NOT EXISTS idx_participants_gameId
     ON participants (gameId);
 CREATE INDEX IF NOT EXISTS idx_participants_championId
@@ -61,6 +81,10 @@ CREATE INDEX IF NOT EXISTS idx_participant_augments_augmentId
     ON participant_augments (augmentId);
 CREATE INDEX IF NOT EXISTS idx_participant_augments_participant
     ON participant_augments (participant_id);
+CREATE INDEX IF NOT EXISTS idx_participant_loadouts_championId
+    ON participant_loadouts (championId);
+CREATE INDEX IF NOT EXISTS idx_participant_loadouts_gameId
+    ON participant_loadouts (gameId);
 """
 
 

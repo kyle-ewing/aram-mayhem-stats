@@ -53,6 +53,8 @@ def make_participant(
     assists=10,
     damage=18000,
     augments=(0, 0, 0, 0),
+    items=(0, 0, 0, 0, 0, 0, 0),
+    summoner_spells=(0, 0),
 ):
     """Build a single canonical-contract participant dict."""
     return {
@@ -66,6 +68,8 @@ def make_participant(
         "assists": assists,
         "totalDamageDealtToChampions": damage,
         "augments": list(augments),
+        "items": list(items),
+        "summonerSpells": list(summoner_spells),
     }
 
 

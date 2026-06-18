@@ -38,6 +38,32 @@ def test_happy_path_stores_match_and_children():
     assert _count("participant_augments") == 2
 
 
+def test_remake_is_not_stored():
+    payload = make_payload([make_participant(champion_id=99, augments=(7, 0, 0, 0))])
+    payload["gameEndedInEarlySurrender"] = True
+    result = ingest_match(payload, database_path=_DB)
+    assert result == {"status": "skipped", "gameId": 1}
+    assert _count("matches") == 0
+    assert _count("participants") == 0
+    assert _count("participant_augments") == 0
+    assert _count("participant_loadouts") == 0
+
+
+def test_non_remake_flag_false_is_stored():
+    payload = make_payload([make_participant(champion_id=99)])
+    payload["gameEndedInEarlySurrender"] = False
+    result = ingest_match(payload, database_path=_DB)
+    assert result["status"] == "created"
+    assert _count("matches") == 1
+
+
+def test_remake_flag_must_be_boolean():
+    payload = make_payload([make_participant(champion_id=99)])
+    payload["gameEndedInEarlySurrender"] = "yes"
+    with pytest.raises(ValidationError):
+        ingest_match(payload, database_path=_DB)
+
+
 def test_idempotent_dedup_does_not_double_count():
     payload = make_payload(
         [make_participant(champion_id=99, augments=(7, 0, 0, 0))]
@@ -57,6 +83,58 @@ def test_zero_augments_dropped():
     )
     ingest_match(payload, database_path=_DB)
     assert _count("participant_augments") == 0
+
+
+def test_loadout_stored_per_participant():
+    payload = make_payload(
+        [
+            make_participant(
+                champion_id=99,
+                items=(3047, 6692, 3071, 3133, 1037, 0, 3340),
+                summoner_spells=(4, 32),
+            )
+        ]
+    )
+    ingest_match(payload, database_path=_DB)
+    # One loadout row per participant (all 10), regardless of augment count.
+    assert _count("participant_loadouts") == 10
+
+    conn = get_connection(_DB)
+    row = conn.execute(
+        "SELECT * FROM participant_loadouts WHERE championId = 99"
+    ).fetchone()
+    assert (row["item0"], row["item6"]) == (3047, 3340)
+    assert (row["summoner1"], row["summoner2"]) == (4, 32)
+
+
+def test_loadout_items_normalized_to_seven_slots():
+    # A short items list is zero-padded; an over-long one is truncated.
+    payload = make_payload(
+        [make_participant(champion_id=99, items=(1001, 1002), summoner_spells=(7,))]
+    )
+    ingest_match(payload, database_path=_DB)
+    conn = get_connection(_DB)
+    row = conn.execute(
+        "SELECT * FROM participant_loadouts WHERE championId = 99"
+    ).fetchone()
+    assert (row["item0"], row["item1"], row["item2"], row["item6"]) == (
+        1001,
+        1002,
+        0,
+        0,
+    )
+    assert (row["summoner1"], row["summoner2"]) == (7, 0)
+
+
+def test_loadout_optional_when_omitted():
+    # A participant without items/summonerSpells still ingests (additive fields).
+    bare = make_participant(champion_id=99)
+    del bare["items"]
+    del bare["summonerSpells"]
+    payload = make_payload([bare])
+    result = ingest_match(payload, database_path=_DB)
+    assert result["status"] == "created"
+    assert _count("participant_loadouts") == 10
 
 
 @pytest.mark.parametrize(
@@ -91,6 +169,10 @@ def test_validation_rejections(mutate):
         ("championName", ""),
         ("championId", "x"),
         ("augments", "notalist"),
+        ("items", "notalist"),
+        ("items", [3047, -5]),
+        ("summonerSpells", {"a": 1}),
+        ("summonerSpells", [4, "Flash"]),
     ],
 )
 def test_participant_validation_rejections(field, value):

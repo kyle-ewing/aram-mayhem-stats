@@ -7,6 +7,7 @@ import {
   mapGameToIngestPayload,
   normalizePatch,
   collapseAugments,
+  collectItems,
   SCHEMA_VERSION,
 } from "../src/map.js";
 
@@ -51,6 +52,14 @@ test("collapseAugments keeps only positive ids and drops zeros", () => {
   );
 });
 
+test("collectItems reads item0..item6 into a fixed 7-slot array, keeping zeros", () => {
+  assert.deepEqual(
+    collectItems({ item0: 3047, item1: 6692, item2: 3071, item3: 3133, item4: 1037, item5: 0, item6: 3340 }),
+    [3047, 6692, 3071, 3133, 1037, 0, 3340],
+  );
+  assert.deepEqual(collectItems({}), [0, 0, 0, 0, 0, 0, 0]);
+});
+
 test("mapGameToIngestPayload produces the exact canonical ingest payload", () => {
   const payload = mapGameToIngestPayload(fixture, resolveName);
 
@@ -63,16 +72,16 @@ test("mapGameToIngestPayload produces the exact canonical ingest payload", () =>
     gameCreation: 1718700000000,
     gameDuration: 1234,
     participants: [
-      { participantId: 1, championId: 64, championName: "LeeSin", teamId: 100, win: true, kills: 12, deaths: 4, assists: 8, totalDamageDealtToChampions: 23456, augments: [101, 207] },
-      { participantId: 2, championId: 103, championName: "Ahri", teamId: 100, win: true, kills: 7, deaths: 6, assists: 15, totalDamageDealtToChampions: 18900, augments: [110, 305] },
-      { participantId: 3, championId: 1, championName: "Annie", teamId: 100, win: true, kills: 3, deaths: 9, assists: 21, totalDamageDealtToChampions: 14200, augments: [] },
-      { participantId: 4, championId: 412, championName: "Thresh", teamId: 100, win: true, kills: 1, deaths: 7, assists: 24, totalDamageDealtToChampions: 6500, augments: [401, 402, 403, 404] },
-      { participantId: 5, championId: 81, championName: "Ezreal", teamId: 100, win: true, kills: 18, deaths: 5, assists: 6, totalDamageDealtToChampions: 31200, augments: [501] },
-      { participantId: 6, championId: 238, championName: "Zed", teamId: 200, win: false, kills: 9, deaths: 8, assists: 7, totalDamageDealtToChampions: 27800, augments: [601, 602] },
-      { participantId: 7, championId: 99, championName: "Lux", teamId: 200, win: false, kills: 6, deaths: 10, assists: 11, totalDamageDealtToChampions: 22100, augments: [701] },
-      { participantId: 8, championId: 555, championName: "Pyke", teamId: 200, win: false, kills: 4, deaths: 11, assists: 13, totalDamageDealtToChampions: 9800, augments: [801] },
-      { participantId: 9, championId: 89, championName: "Leona", teamId: 200, win: false, kills: 2, deaths: 9, assists: 18, totalDamageDealtToChampions: 7400, augments: [] },
-      { participantId: 10, championId: 360, championName: "Samira", teamId: 200, win: false, kills: 14, deaths: 7, assists: 5, totalDamageDealtToChampions: 29500, augments: [1001, 1002, 1003] },
+      { participantId: 1, championId: 64, championName: "LeeSin", teamId: 100, win: true, kills: 12, deaths: 4, assists: 8, totalDamageDealtToChampions: 23456, augments: [101, 207], items: [3047, 6692, 3071, 3133, 1037, 0, 3340], summonerSpells: [4, 32] },
+      { participantId: 2, championId: 103, championName: "Ahri", teamId: 100, win: true, kills: 7, deaths: 6, assists: 15, totalDamageDealtToChampions: 18900, augments: [110, 305], items: [6655, 3157, 3020, 4645, 0, 0, 3363], summonerSpells: [4, 32] },
+      { participantId: 3, championId: 1, championName: "Annie", teamId: 100, win: true, kills: 3, deaths: 9, assists: 21, totalDamageDealtToChampions: 14200, augments: [], items: [6653, 3020, 4628, 0, 0, 0, 3340], summonerSpells: [7, 4] },
+      { participantId: 4, championId: 412, championName: "Thresh", teamId: 100, win: true, kills: 1, deaths: 7, assists: 24, totalDamageDealtToChampions: 6500, augments: [401, 402, 403, 404], items: [3190, 3107, 3109, 0, 0, 0, 3364], summonerSpells: [4, 3] },
+      { participantId: 5, championId: 81, championName: "Ezreal", teamId: 100, win: true, kills: 18, deaths: 5, assists: 6, totalDamageDealtToChampions: 31200, augments: [501], items: [3508, 6672, 3046, 3036, 0, 0, 3340], summonerSpells: [4, 32] },
+      { participantId: 6, championId: 238, championName: "Zed", teamId: 200, win: false, kills: 9, deaths: 8, assists: 7, totalDamageDealtToChampions: 27800, augments: [601, 602], items: [6699, 3142, 6694, 0, 0, 0, 3340], summonerSpells: [4, 32] },
+      { participantId: 7, championId: 99, championName: "Lux", teamId: 200, win: false, kills: 6, deaths: 10, assists: 11, totalDamageDealtToChampions: 22100, augments: [701], items: [6655, 3157, 3135, 0, 0, 0, 3363], summonerSpells: [4, 7] },
+      { participantId: 8, championId: 555, championName: "Pyke", teamId: 200, win: false, kills: 4, deaths: 11, assists: 13, totalDamageDealtToChampions: 9800, augments: [801], items: [3179, 6691, 3158, 0, 0, 0, 3340], summonerSpells: [4, 32] },
+      { participantId: 9, championId: 89, championName: "Leona", teamId: 200, win: false, kills: 2, deaths: 9, assists: 18, totalDamageDealtToChampions: 7400, augments: [], items: [3001, 3109, 3047, 0, 0, 0, 3364], summonerSpells: [4, 32] },
+      { participantId: 10, championId: 360, championName: "Samira", teamId: 200, win: false, kills: 14, deaths: 7, assists: 5, totalDamageDealtToChampions: 29500, augments: [1001, 1002, 1003], items: [6673, 3031, 3072, 3006, 0, 0, 3340], summonerSpells: [4, 32] },
     ],
   };
 
@@ -96,7 +105,27 @@ test("mapped payload satisfies the contract invariants", () => {
     assert.equal(typeof p.win, "boolean");
     assert.ok(Array.isArray(p.augments));
     assert.ok(p.augments.every((a) => Number.isInteger(a) && a > 0), "augments are positive ints");
+    assert.ok(Array.isArray(p.items) && p.items.length === 7, "items is a 7-slot array");
+    assert.ok(p.items.every((i) => Number.isInteger(i) && i >= 0), "items are non-negative ints");
+    assert.ok(Array.isArray(p.summonerSpells) && p.summonerSpells.length === 2, "two summoner spells");
+    assert.ok(p.summonerSpells.every((s) => Number.isInteger(s) && s >= 0), "spells are non-negative ints");
   }
+});
+
+test("a remade game is flagged with gameEndedInEarlySurrender; a normal game is not", () => {
+  const normal = mapGameToIngestPayload(fixture, resolveName);
+  assert.equal("gameEndedInEarlySurrender" in normal, false);
+
+  const remakeGame = {
+    gameId: 2,
+    queueId: 2400,
+    gameVersion: "26.12.1.1",
+    participants: [
+      { participantId: 1, championId: 64, teamId: 100, stats: { win: false, gameEndedInEarlySurrender: true } },
+    ],
+  };
+  const remake = mapGameToIngestPayload(remakeGame, resolveName);
+  assert.equal(remake.gameEndedInEarlySurrender, true);
 });
 
 test("totalDamageDealtToChampions falls back to totalDamageDealt when absent", () => {

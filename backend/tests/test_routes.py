@@ -53,6 +53,18 @@ def test_ingest_duplicate_returns_200(client):
     assert resp.get_json() == {"status": "duplicate", "gameId": 1}
 
 
+def test_ingest_remake_returns_200_skipped(client):
+    payload = make_payload(
+        [make_participant(champion_id=99, augments=(7, 0, 0, 0))]
+    )
+    payload["gameEndedInEarlySurrender"] = True
+    resp = _ingest(client, payload)
+    assert resp.status_code == 200
+    assert resp.get_json() == {"status": "skipped", "gameId": 1}
+    # The remade game left nothing behind to aggregate.
+    assert client.get("/api/champions").get_json() == []
+
+
 def test_ingest_invalid_returns_400(client):
     payload = make_payload()
     del payload["queueId"]

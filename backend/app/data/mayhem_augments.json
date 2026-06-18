@@ -20,7 +20,7 @@
   {
     "name": "Courage of the Colossus",
     "tier": "Prismatic",
-    "id": null,
+    "id": 1018,
     "notes": ""
   },
   {
@@ -136,5 +136,113 @@
     "tier": "Gold",
     "id": 1353,
     "notes": "c"
+  },
+  {
+    "name": "Spirit Bomb",
+    "tier": "Prismatic",
+    "id": 2077,
+    "notes": ""
+  },
+  {
+    "name": "Ravenous Bind",
+    "tier": "Gold",
+    "id": 2104,
+    "notes": ""
+  },
+  {
+    "name": "Overflow",
+    "tier": "Gold",
+    "id": 1311,
+    "notes": "c"
+  },
+  {
+    "name": "Searing Dawn",
+    "tier": "Gold",
+    "id": 1072,
+    "notes": ""
+  },
+  {
+    "name": "Titan's Resolve",
+    "tier": "Prismatic",
+    "id": 2138,
+    "notes": ""
+  },
+  {
+    "name": "Adaptive Ward",
+    "tier": "Silver",
+    "id": 1013,
+    "notes": ""
+  },
+  {
+    "name": "Celestial Body",
+    "tier": "Gold",
+    "id": 1001,
+    "notes": ""
+  },
+  {
+    "name": "Final Form",
+    "tier": "Prismatic",
+    "id": 1344,
+    "notes": ""
+  },
+  {
+    "name": "Get Excited",
+    "tier": "Gold",
+    "id": 1322,
+    "notes": ""
+  },
+  {
+    "name": "Shadow Runner",
+    "tier": "Silver",
+    "id": 1027,
+    "notes": ""
+  },
+  {
+    "name": "Earthwake",
+    "tier": "Prismatic",
+    "id": 1073,
+    "notes": ""
+  },
+  {
+    "name": "It's Killing Time",
+    "tier": "Gold",
+    "id": 1211,
+    "notes": ""
+  },
+  {
+    "name": "From Downdown",
+    "tier": "Gold",
+    "id": 2103,
+    "notes": ""
+  },
+  {
+    "name": "Scoped Weapons",
+    "tier": "Silver",
+    "id": 1081,
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Infinity Edge",
+    "tier": "Gold",
+    "id": 1336,
+    "notes": "c"
+  },
+  {
+    "name": "Tap Dancer",
+    "tier": "Prismatic",
+    "id": 1170,
+    "notes": ""
+  },
+  {
+    "name": "Spin Me Right Round",
+    "tier": "Silver",
+    "id": 1386,
+    "notes": ""
+  },
+  {
+    "name": "Pressure Cooker",
+    "tier": "Gold",
+    "id": 2102,
+    "notes": ""
   }
 ]

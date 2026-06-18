@@ -21,6 +21,11 @@ _EXPECTED_SCHEMA_VERSION = 1
 _PARTICIPANT_COUNT = 10
 _VALID_TEAM_IDS = (100, 200)
 
+# End-of-game loadout slots, stored but not yet read by any aggregation.
+# Items: item0..item5 plus the item6 trinket. Summoner spells: spell1, spell2.
+_ITEM_SLOTS = 7
+_SUMMONER_SPELL_SLOTS = 2
+
 _PARTICIPANT_INT_FIELDS = (
     "participantId",
     "championId",
@@ -42,10 +47,16 @@ def ingest_match(payload: Any, database_path: str | None = None) -> dict:
     """Validate ``payload`` and store the match, deduping on ``gameId``.
 
     Returns ``{"status": "created", "gameId": int}`` for a new match or
-    ``{"status": "duplicate", "gameId": int}`` for a repeat. Raises
-    ``ValidationError`` (400) on any contract violation.
+    ``{"status": "duplicate", "gameId": int}`` for a repeat. Games that ended in
+    a remake (``gameEndedInEarlySurrender``) are never stored and return
+    ``{"status": "skipped", "gameId": int}``. Raises ``ValidationError`` (400)
+    on any contract violation.
     """
     match = _validate(payload)
+
+    # Remakes carry no meaningful stats; drop them before touching the database.
+    if match["gameEndedInEarlySurrender"]:
+        return {"status": "skipped", "gameId": match["gameId"]}
 
     conn = get_connection(database_path)
     try:
@@ -89,6 +100,7 @@ def _validate(payload: Any) -> dict:
 
     game_creation = _optional_int(payload, "gameCreation")
     game_duration = _optional_int(payload, "gameDuration")
+    remake = _optional_bool(payload, "gameEndedInEarlySurrender")
 
     raw_participants = payload.get("participants")
     if not isinstance(raw_participants, list):
@@ -108,6 +120,7 @@ def _validate(payload: Any) -> dict:
         "gameVersion": game_version,
         "gameCreation": game_creation,
         "gameDuration": game_duration,
+        "gameEndedInEarlySurrender": remake,
         "participants": participants,
     }
 
@@ -164,6 +177,13 @@ def _validate_participant(p: Any, index: int) -> dict:
         if aug > 0:
             clean.append(aug)
     values["augments"] = clean
+
+    # End-of-game items and summoner spells. Optional and additive: older
+    # collectors that omit them still validate. Normalized to fixed slot counts.
+    values["items"] = _optional_int_list(p, "items", index, _ITEM_SLOTS)
+    values["summonerSpells"] = _optional_int_list(
+        p, "summonerSpells", index, _SUMMONER_SPELL_SLOTS
+    )
 
     return values
 
@@ -223,6 +243,23 @@ def _store(conn: sqlite3.Connection, match: dict) -> bool:
                 (participant_row_id, augment_id),
             )
 
+        conn.execute(
+            """
+            INSERT INTO participant_loadouts
+                (participant_id, gameId, championId,
+                 item0, item1, item2, item3, item4, item5, item6,
+                 summoner1, summoner2)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                participant_row_id,
+                match["gameId"],
+                p["championId"],
+                *p["items"],
+                *p["summonerSpells"],
+            ),
+        )
+
     return True
 
 
@@ -239,12 +276,51 @@ def _require_int(obj: dict, field: str, context: str | None = None) -> int:
     return value
 
 
+def _optional_int_list(
+    obj: dict, field: str, index: int, length: int
+) -> list[int]:
+    """Validate an optional list of non-negative ints into exactly ``length`` slots.
+
+    Missing/None yields all-zero slots; a short list is zero-padded and a long
+    one is truncated, so the stored loadout always has a fixed shape. Booleans,
+    non-ints, and negatives are rejected with a ``ValidationError``.
+    """
+    raw = obj.get(field)
+    if raw is None:
+        return [0] * length
+    if not isinstance(raw, list):
+        raise ValidationError(f"participants[{index}].{field} must be a list")
+    cleaned: list[int] = []
+    for value in raw:
+        if isinstance(value, bool) or not isinstance(value, int):
+            raise ValidationError(
+                f"participants[{index}].{field} must contain integers"
+            )
+        if value < 0:
+            raise ValidationError(
+                f"participants[{index}].{field} must contain non-negative integers"
+            )
+        cleaned.append(value)
+    if len(cleaned) >= length:
+        return cleaned[:length]
+    return cleaned + [0] * (length - len(cleaned))
+
+
 def _optional_int(obj: dict, field: str) -> int | None:
     if field not in obj or obj[field] is None:
         return None
     value = obj[field]
     if isinstance(value, bool) or not isinstance(value, int):
         raise ValidationError(f"'{field}' must be an integer")
+    return value
+
+
+def _optional_bool(obj: dict, field: str) -> bool:
+    if field not in obj or obj[field] is None:
+        return False
+    value = obj[field]
+    if not isinstance(value, bool):
+        raise ValidationError(f"'{field}' must be a boolean")
     return value
 
 

@@ -8,6 +8,11 @@ export const SCHEMA_VERSION = 1;
 // The contract notes the array is variable length, so raising this is forward compatible.
 const MAX_AUGMENT_SLOTS = 4;
 
+// End-of-game inventory slots in the LCU stats block: item0..item5 plus the
+// item6 trinket. Slots are read positionally (0 means an empty slot) so the
+// stored loadout mirrors exactly what the champion finished the game holding.
+const ITEM_SLOTS = 7;
+
 // Normalize a full LCU gameVersion build string to "MAJOR.MINOR".
 // "26.12.123.4567" -> "26.12". Falls back to the raw value if it has fewer than two parts.
 export function normalizePatch(gameVersion) {
@@ -33,6 +38,17 @@ export function collapseAugments(stats, maxSlots = MAX_AUGMENT_SLOTS) {
     }
   }
   return augments;
+}
+
+// Read item0..item6 from a stats block into a fixed-length array, preserving slot
+// positions. Empty slots come through as 0. Unlike augments, zeros are NOT dropped:
+// slot position is the point, so the backend can store the loadout slot for slot.
+export function collectItems(stats, slots = ITEM_SLOTS) {
+  const items = [];
+  for (let slot = 0; slot < slots; slot += 1) {
+    items.push(toInt(stats?.[`item${slot}`]));
+  }
+  return items;
 }
 
 function toInt(value, fallback = 0) {
@@ -62,6 +78,8 @@ function mapParticipant(participant, resolveChampionName) {
     assists: toInt(stats.assists),
     totalDamageDealtToChampions: damageDealtToChampions(stats),
     augments: collapseAugments(stats),
+    items: collectItems(stats),
+    summonerSpells: [toInt(participant?.spell1Id), toInt(participant?.spell2Id)],
   };
 }
 
@@ -80,6 +98,12 @@ export function mapGameToIngestPayload(game, resolveChampionName = () => "") {
     patch: normalizePatch(game.gameVersion),
     participants: participants.map((p) => mapParticipant(p, resolveChampionName)),
   };
+  // A remade game sets gameEndedInEarlySurrender on every participant. Surface it
+  // as a single top-level flag (only when true, so a normal game's payload is
+  // unchanged) so the backend can refuse to store remakes.
+  if (participants.some((p) => Boolean(p?.stats?.gameEndedInEarlySurrender))) {
+    payload.gameEndedInEarlySurrender = true;
+  }
   if (typeof game.gameVersion === "string" && game.gameVersion.length > 0) {
     payload.gameVersion = game.gameVersion;
   }

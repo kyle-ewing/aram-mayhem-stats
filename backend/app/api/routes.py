@@ -14,6 +14,7 @@ GET  /api/health
 POST /api/ingest/match
     201 {"status": "created", "gameId": <int>}      new match stored
     200 {"status": "duplicate", "gameId": <int>}    dedup, nothing changed
+    200 {"status": "skipped", "gameId": <int>}      remake, never stored
     400 {"error": <str>}                            validation failure
     Body: the canonical ingest payload (see collector/INGEST_CONTRACT.md).
 
