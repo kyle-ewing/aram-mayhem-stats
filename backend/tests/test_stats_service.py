@@ -126,7 +126,7 @@ def test_augment_enrichment_degrades_without_map():
     _seed()
     board = augment_leaderboard(_DB, augment_map={})
     aug = next(a for a in board if a["augmentId"] == 7)
-    assert aug["augmentName"] == "Augment 7"
+    assert aug["augmentName"] == "7"
     assert aug["iconUrl"] is None
     assert aug["rarity"] is None
 

@@ -1,13 +1,16 @@
 """Aggregation over ingested Mayhem matches (Flask-free, unit-testable).
 
 Computes per-champion, per-augment, and champion+augment synergy winrates from
-the SQLite store, then enriches augment ids with name/icon/rarity (Community
-Dragon, keyless) and champions with Data Dragon icons.
+the SQLite store, then enriches augment ids with a name/rarity from the curated
+Mayhem pool (``app/data/mayhem_augments.json``) and champions with Data Dragon
+icons.
 
-Augment static data is fetched once and degrades gracefully: if Community Dragon
-is unreachable the augment fields fall back to a placeholder name and ``None``
-icon/rarity, exactly like the old per-summoner service did. Callers (tests) may
-inject ``augment_map`` to avoid HTTP.
+Augment names come from the curated pool, not Community Dragon: Mayhem augment
+ids are a different id space from Community Dragon's arena augments, so only the
+hand-maintained pool can resolve a Mayhem id to a name. If an id has no curated
+entry (still null, or not yet recorded), the augment name falls back to the raw
+id as a string and icon/rarity are ``None``. Callers (tests) may inject
+``augment_map`` directly.
 
 ------------------------------------------------------------------------------
 Response shapes (camelCase, frontend contract)
@@ -32,8 +35,8 @@ import sqlite3
 from typing import Optional
 
 from ..db import close_connection, get_connection
-from ..errors import ApiError
-from ..riot import champion_icon_url, fetch_augments
+from ..riot import champion_icon_url
+from .mayhem_augments import get_mayhem_augments
 
 
 def champion_winrates(
@@ -164,12 +167,14 @@ def _finalize_augment_rows(
         games = row["games"] or 0
         wins = row["wins"] or 0
         info = augment_map.get(augment_id)
-        if info is not None:
-            name = info.get("name") or f"Augment {augment_id}"
+        if info is not None and info.get("name"):
+            name = info["name"]
             icon_url = info.get("iconLarge") or info.get("iconSmall")
             rarity = info.get("rarity")
         else:
-            name = f"Augment {augment_id}"
+            # No matching id in the static data (or it has no name): fall back
+            # to showing the raw augment id rather than a placeholder label.
+            name = str(augment_id)
             icon_url = None
             rarity = None
         result.append(
@@ -190,14 +195,18 @@ def _finalize_augment_rows(
 def _ensure_augment_map(
     augment_map: Optional[dict[int, dict]],
 ) -> dict[int, dict]:
-    """Return the injected map, or fetch one, degrading to ``{}`` on failure.
+    """Return the injected map, or build one from the curated Mayhem pool.
 
-    Only ``ApiError`` subclasses (the contract of ``fetch_augments``) are
-    swallowed so unreachable Community Dragon never fails an aggregation query.
+    Names come from ``app/data/mayhem_augments.json``, not Community Dragon:
+    Community Dragon's arena augment ids are a different id space from ARAM
+    Mayhem's, so only the hand-maintained pool can map a Mayhem augment id to a
+    name. Entries whose ``id`` is still null are skipped (they have no id to
+    match against). Tier is carried through as ``rarity`` for display.
     """
     if augment_map is not None:
         return augment_map
-    try:
-        return fetch_augments()
-    except ApiError:
-        return {}
+    return {
+        entry["id"]: {"name": entry.get("name", ""), "rarity": entry.get("tier")}
+        for entry in get_mayhem_augments()
+        if isinstance(entry, dict) and entry.get("id") is not None
+    }

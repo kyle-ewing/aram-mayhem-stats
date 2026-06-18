@@ -50,8 +50,8 @@
   {
     "name": "Quest: Wooglet's Witchcap",
     "tier": "Prismatic",
-    "id": null,
-    "notes": ""
+    "id": 1156,
+    "notes": "c"
   },
   {
     "name": "Stackasaurus",
@@ -62,25 +62,79 @@
   {
     "name": "Giant Slayer",
     "tier": "Prismatic",
-    "id": 1356,
-    "notes": ""
+    "id": 1195,
+    "notes": "c"
   },
   {
     "name": "Crit 'n Cast",
     "tier": "Silver",
-    "id": 1195,
-    "notes": ""
+    "id": 2024,
+    "notes": "c"
   },
   {
     "name": "Deft",
     "tier": "Silver",
     "id": 1022,
-    "notes": ""
+    "notes": "c"
   },
   {
     "name": "Critical Missile",
     "tier": "Gold",
-    "id": 2024,
+    "id": 1356,
+    "notes": "c"
+  },
+  {
+    "name": "Ethereal Weapon",
+    "tier": "Gold",
+    "id": 1029,
+    "notes": "c"
+  },
+  {
+    "name": "Light 'em Up",
+    "tier": "Silver",
+    "id": 1051,
+    "notes": "c"
+  },
+  {
+    "name": "Infinite Recursion",
+    "tier": "Prismatic",
+    "id": null,
     "notes": ""
+  },
+  {
+    "name": "Dropkick",
+    "tier": "Prismatic",
+    "id": 2006,
+    "notes": "c"
+  },
+  {
+    "name": "Pursuit of Haste",
+    "tier": "Gold",
+    "id": 2100,
+    "notes": "c"
+  },
+  {
+    "name": "Upgrade Immolate",
+    "tier": "Silver",
+    "id": 1319,
+    "notes": "c"
+  },
+  {
+    "name": "Firefox",
+    "tier": "Silver",
+    "id": 1308,
+    "notes": "c"
+  },
+  {
+    "name": "Heavy Hitter",
+    "tier": "Silver",
+    "id": 1181,
+    "notes": "c"
+  },
+  {
+    "name": "Tank Engine",
+    "tier": "Gold",
+    "id": 1353,
+    "notes": "c"
   }
 ]

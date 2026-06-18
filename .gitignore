@@ -1,0 +1,39 @@
+# --- Python / backend ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Secrets / env ---
+.env
+.env.local
+*.local
+
+# --- Node / frontend ---
+node_modules/
+dist/
+dist-ssr/
+*.log
+npm-debug.log*
+
+# --- Database (runtime SQLite store) ---
+mayhem.db
+*.sqlite
+*.sqlite3
+backend/*.db
+
+# --- Claude Code (personal/local settings only; agents/ are shared) ---
+.claude/settings.local.json
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

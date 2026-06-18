@@ -8,23 +8,19 @@ import pytest
 from app.services import stats as stats_service
 from tests.conftest import make_participant, make_payload
 
-_AUGMENT_MAP = {
-    7: {
-        "id": 7,
-        "name": "Symphony of War",
-        "iconLarge": "https://cdragon.example/augments/symphony_large.png",
-        "iconSmall": "https://cdragon.example/augments/symphony_small.png",
-        "rarity": 1,
-        "desc": "",
-    }
-}
+_MAYHEM_POOL = [
+    {"name": "Symphony of War", "tier": "Gold", "id": 7, "notes": ""},
+]
 
 
 @pytest.fixture(autouse=True)
 def _stub_augments(monkeypatch):
-    """Inject a fixed augment map so stats endpoints never fetch over HTTP."""
+    """Inject a fixed curated Mayhem pool so stats endpoints resolve names
+    from a known dataset rather than the real data file."""
     monkeypatch.setattr(
-        stats_service, "fetch_augments", lambda *a, **k: dict(_AUGMENT_MAP)
+        stats_service,
+        "get_mayhem_augments",
+        lambda *a, **k: [dict(e) for e in _MAYHEM_POOL],
     )
 
 
@@ -110,8 +106,8 @@ def test_champion_detail_shape(client):
     assert data["winRate"] == 1.0
     aug = next(a for a in data["augments"] if a["augmentId"] == 7)
     assert aug["augmentName"] == "Symphony of War"
-    assert aug["rarity"] == 1
-    assert aug["iconUrl"] is not None
+    assert aug["rarity"] == "Gold"
+    assert aug["iconUrl"] is None
     assert aug["games"] == 1
 
 
