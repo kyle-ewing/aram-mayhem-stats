@@ -39,6 +39,16 @@ from ..riot import champion_icon_url
 from .mayhem_augments import get_mayhem_augments
 
 
+def total_games(database_path: Optional[str] = None) -> int:
+    """Total number of ingested matches (games), for a parsed-games counter."""
+    conn = get_connection(database_path)
+    try:
+        row = conn.execute("SELECT COUNT(*) AS n FROM matches").fetchone()
+    finally:
+        close_connection(conn)
+    return row["n"] if row else 0
+
+
 def champion_winrates(
     database_path: Optional[str] = None,
     *,
@@ -169,7 +179,11 @@ def _finalize_augment_rows(
         info = augment_map.get(augment_id)
         if info is not None and info.get("name"):
             name = info["name"]
-            icon_url = info.get("iconLarge") or info.get("iconSmall")
+            icon_url = (
+                info.get("icon")
+                or info.get("iconLarge")
+                or info.get("iconSmall")
+            )
             rarity = info.get("rarity")
         else:
             # No matching id in the static data (or it has no name): fall back
@@ -206,7 +220,11 @@ def _ensure_augment_map(
     if augment_map is not None:
         return augment_map
     return {
-        entry["id"]: {"name": entry.get("name", ""), "rarity": entry.get("tier")}
+        entry["id"]: {
+            "name": entry.get("name", ""),
+            "rarity": entry.get("tier"),
+            "icon": entry.get("icon"),
+        }
         for entry in get_mayhem_augments()
         if isinstance(entry, dict) and entry.get("id") is not None
     }

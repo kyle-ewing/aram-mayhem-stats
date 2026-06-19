@@ -3,12 +3,14 @@
 
 const DEFAULTS = {
   backendBaseUrl: "http://127.0.0.1:5000",
-  pollIntervalMs: 60000,
+  // Pulse every 2.5 minutes. Each pulse grabs one page of match history and then
+  // advances the paging window, so successive pulses walk deeper into history.
+  pollIntervalMs: 150000,
   reconnectIntervalMs: 5000,
   mayhemQueueId: 2400,
   ddragonVersion: "",
   seenFile: "seen.json",
-  matchHistoryPageSize: 20,
+  matchHistoryPageSize: 100,
 };
 
 function parseIntOr(value, fallback) {

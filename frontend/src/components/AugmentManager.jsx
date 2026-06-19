@@ -4,6 +4,7 @@ import {
   getMayhemAugments,
   updateMayhemAugment,
 } from '../api'
+import Icon from './Icon'
 import RarityBadge from './RarityBadge'
 
 const TIERS = ['Silver', 'Gold', 'Prismatic']
@@ -15,6 +16,12 @@ export default function AugmentManager() {
   const [augments, setAugments] = useState([])
   const [loading, setLoading] = useState(true)
   const [loadError, setLoadError] = useState(null)
+
+  // List controls: filter by name, and a click-to-sort column with direction
+  // (default alphabetical by name, ascending).
+  const [filter, setFilter] = useState('')
+  const [sortBy, setSortBy] = useState('name')
+  const [sortDir, setSortDir] = useState('asc')
 
   const [form, setForm] = useState(EMPTY_FORM)
   const [submitting, setSubmitting] = useState(false)
@@ -48,13 +55,42 @@ export default function AugmentManager() {
     }
   }, [])
 
-  const sorted = useMemo(() => {
-    return [...augments].sort((a, b) => {
-      const t = (TIER_ORDER[a.tier] ?? 9) - (TIER_ORDER[b.tier] ?? 9)
-      if (t !== 0) return t
-      return a.name.localeCompare(b.name)
+  // Filter by name (case-insensitive substring), then sort by the chosen key.
+  // Name is the default and the tiebreaker for tier/id so the order is stable.
+  const visible = useMemo(() => {
+    const needle = filter.trim().toLowerCase()
+    const rows = needle
+      ? augments.filter((a) => a.name.toLowerCase().includes(needle))
+      : [...augments]
+
+    const dir = sortDir === 'asc' ? 1 : -1
+    const byName = (a, b) => a.name.localeCompare(b.name)
+    rows.sort((a, b) => {
+      if (sortBy === 'tier') {
+        const t = (TIER_ORDER[a.tier] ?? 9) - (TIER_ORDER[b.tier] ?? 9)
+        return dir * (t !== 0 ? t : byName(a, b))
+      }
+      if (sortBy === 'id') {
+        // Augments without an id sort last (then alphabetically among themselves).
+        const ai = a.id == null ? Infinity : a.id
+        const bi = b.id == null ? Infinity : b.id
+        return dir * (ai !== bi ? ai - bi : byName(a, b))
+      }
+      return dir * byName(a, b)
     })
-  }, [augments])
+    return rows
+  }, [augments, filter, sortBy, sortDir])
+
+  // Click a column to sort by it; click the active column again to flip direction.
+  function toggleSort(col) {
+    if (sortBy === col) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))
+    }
+    else {
+      setSortBy(col)
+      setSortDir('asc')
+    }
+  }
 
   function update(field, value) {
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -196,7 +232,7 @@ export default function AugmentManager() {
             type="number"
             value={form.id}
             onChange={(e) => update('id', e.target.value)}
-            placeholder="Community Dragon id"
+            placeholder="e.g. 1234"
           />
         </div>
 
@@ -227,7 +263,13 @@ export default function AugmentManager() {
         </div>
       </form>
 
-      <h3>Current list ({augments.length})</h3>
+      <h3>
+        Current list (
+        {visible.length !== augments.length
+          ? `${visible.length} of ${augments.length}`
+          : augments.length}
+        )
+      </h3>
 
       {loading && <p className="status">Loading augments...</p>}
       {loadError && !loading && (
@@ -236,23 +278,64 @@ export default function AugmentManager() {
         </p>
       )}
 
-      {!loading && !loadError && sorted.length === 0 && (
+      {!loading && !loadError && augments.length > 0 && (
+        <div className="augment-controls">
+          <input
+            type="search"
+            className="augment-filter"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="Filter by name..."
+            aria-label="Filter augments by name"
+          />
+        </div>
+      )}
+
+      {!loading && !loadError && augments.length === 0 && (
         <p className="empty">No augments recorded yet.</p>
       )}
 
-      {!loading && !loadError && sorted.length > 0 && (
+      {!loading && !loadError && augments.length > 0 && visible.length === 0 && (
+        <p className="empty">No augments match "{filter.trim()}".</p>
+      )}
+
+      {!loading && !loadError && visible.length > 0 && (
         <table className="augment-table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Tier</th>
-              <th>Id</th>
+              {[
+                ['name', 'Name'],
+                ['tier', 'Tier'],
+                ['id', 'Id'],
+              ].map(([col, label]) => (
+                <th
+                  key={col}
+                  aria-sort={
+                    sortBy === col
+                      ? sortDir === 'asc'
+                        ? 'ascending'
+                        : 'descending'
+                      : 'none'
+                  }
+                >
+                  <button
+                    type="button"
+                    className={`th-sort${sortBy === col ? ' active' : ''}`}
+                    onClick={() => toggleSort(col)}
+                  >
+                    {label}
+                    <span className="sort-arrow" aria-hidden="true">
+                      {sortBy === col ? (sortDir === 'asc' ? '▲' : '▼') : ''}
+                    </span>
+                  </button>
+                </th>
+              ))}
               <th>Notes</th>
               <th aria-label="Actions" />
             </tr>
           </thead>
           <tbody>
-            {sorted.map((a) =>
+            {visible.map((a) =>
               editingName === a.name ? (
                 <tr key={a.name} className="editing">
                   <td>
@@ -318,7 +401,12 @@ export default function AugmentManager() {
                 </tr>
               ) : (
                 <tr key={a.name}>
-                  <td>{a.name}</td>
+                  <td>
+                    <span className="augment-name-cell">
+                      <Icon url={a.icon} className="augment-row-icon" />
+                      {a.name}
+                    </span>
+                  </td>
                   <td>
                     <RarityBadge rarity={a.tier} />
                   </td>

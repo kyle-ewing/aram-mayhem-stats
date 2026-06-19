@@ -49,13 +49,16 @@ export class LcuClient {
     return this.#request("/lol-summoner/v1/current-summoner");
   }
 
-  // Recent match list for the logged-in summoner. Returns the game summaries array.
-  async getRecentGames(puuid, pageSize = 20) {
-    const end = Math.max(0, pageSize - 1);
+  // One page of the match list for the logged-in summoner, starting at begIndex.
+  // The LCU pages history via begIndex/endIndex (0 is the most recent game), so a
+  // caller can walk deeper by advancing begIndex. Returns the game summaries array.
+  async getRecentGames(puuid, pageSize = 100, begIndex = 0) {
+    const start = Math.max(0, begIndex);
+    const end = start + Math.max(1, pageSize) - 1;
     const base = puuid
       ? `/lol-match-history/v1/products/lol/${puuid}/matches`
       : "/lol-match-history/v1/products/lol/current-summoner/matches";
-    const body = await this.#request(`${base}?begIndex=0&endIndex=${end}`);
+    const body = await this.#request(`${base}?begIndex=${start}&endIndex=${end}`);
     return body?.games?.games ?? [];
   }
 

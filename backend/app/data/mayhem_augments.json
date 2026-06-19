@@ -1,248 +1,1829 @@
 [
   {
-    "name": "Spin To Win",
+    "name": "Adamant",
     "tier": "Silver",
-    "id": null,
+    "id": 1327,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/adamant_small.png",
     "notes": ""
   },
   {
-    "name": "Marksmage",
+    "name": "ADAPt",
+    "tier": "Silver",
+    "id": 1205,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/adapt_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Adaptive Ward",
+    "tier": "Silver",
+    "id": 2138,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
+    "notes": ""
+  },
+  {
+    "name": "All For You",
     "tier": "Gold",
-    "id": null,
+    "id": 1141,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/allforyou_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Apex Inventor",
+    "tier": "Gold",
+    "id": 1002,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/apexinventor_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Archmage",
+    "tier": "Prismatic",
+    "id": 2087,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/eureka_small.png",
     "notes": ""
   },
   {
     "name": "Back To Basics",
     "tier": "Prismatic",
-    "id": null,
+    "id": 1004,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/backtobasics_small.png",
     "notes": ""
+  },
+  {
+    "name": "Big Brain",
+    "tier": "Gold",
+    "id": 1180,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bigbrain_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Biggest Snowball Ever",
+    "tier": "Prismatic",
+    "id": 1329,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Blade Waltz",
+    "tier": "Prismatic",
+    "id": 1006,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bladewaltz_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Blunt Force",
+    "tier": "Silver",
+    "id": 1007,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/bluntforce_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Bolstered",
+    "tier": "Silver",
+    "id": 2144,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
+    "notes": ""
+  },
+  {
+    "name": "BONK!",
+    "tier": "Gold",
+    "id": 2111,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/bonk_large.png",
+    "notes": ""
+  },
+  {
+    "name": "Bounce of the Poro King",
+    "tier": "Prismatic",
+    "id": 2003,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poroking_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Bread And Butter",
+    "tier": "Gold",
+    "id": 1103,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Bread and Cheese",
+    "tier": "Gold",
+    "id": 1151,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Bread And Jam",
+    "tier": "Gold",
+    "id": 1150,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Buff Buddies",
+    "tier": "Silver",
+    "id": 1009,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/buffbuddies_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Can't Touch This",
+    "tier": "Prismatic",
+    "id": 1011,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/canttouchthis_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Celestial Body",
+    "tier": "Gold",
+    "id": 1013,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/celestialbody_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Cerberus",
+    "tier": "Prismatic",
+    "id": 1397,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/cerberus_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Chain Reaction",
+    "tier": "Prismatic",
+    "id": 2078,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
+    "notes": ""
+  },
+  {
+    "name": "Cheating",
+    "tier": "Gold",
+    "id": 1313,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/cheating_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Circle of Death",
+    "tier": "Prismatic",
+    "id": 1015,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/circleofdeath_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Clown College",
+    "tier": "Prismatic",
+    "id": 1310,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/clowncollege_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Combusting Interest",
+    "tier": "Gold",
+    "id": 2128,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/bloodmoney2_small.png",
+    "notes": "c"
   },
   {
     "name": "Courage of the Colossus",
     "tier": "Prismatic",
     "id": 1018,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/courageofthecolossus_small.png",
     "notes": ""
   },
   {
-    "name": "Dual Wield",
-    "tier": "Prismatic",
-    "id": null,
+    "name": "Crack Open That Egg",
+    "tier": "Silver",
+    "id": 1418,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/crackopenthategg_small.png",
     "notes": ""
-  },
-  {
-    "name": "Fan The Hammer",
-    "tier": "Prismatic",
-    "id": null,
-    "notes": ""
-  },
-  {
-    "name": "Infernal Conduit",
-    "tier": "Prismatic",
-    "id": null,
-    "notes": ""
-  },
-  {
-    "name": "Multishot",
-    "tier": "Prismatic",
-    "id": null,
-    "notes": ""
-  },
-  {
-    "name": "Quest: Wooglet's Witchcap",
-    "tier": "Prismatic",
-    "id": 1156,
-    "notes": "c"
-  },
-  {
-    "name": "Stackasaurus",
-    "tier": "Prismatic",
-    "id": null,
-    "notes": ""
-  },
-  {
-    "name": "Giant Slayer",
-    "tier": "Prismatic",
-    "id": 1195,
-    "notes": "c"
   },
   {
     "name": "Crit 'n Cast",
     "tier": "Silver",
     "id": 2024,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/critncast_small.png",
     "notes": "c"
   },
   {
-    "name": "Deft",
-    "tier": "Silver",
-    "id": 1022,
-    "notes": "c"
+    "name": "Critical Healing",
+    "tier": "Gold",
+    "id": 1118,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/criticalhealing_small.png",
+    "notes": ""
   },
   {
     "name": "Critical Missile",
     "tier": "Gold",
     "id": 1356,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/criticalmissile_small.png",
     "notes": "c"
   },
   {
-    "name": "Ethereal Weapon",
+    "name": "Critical Rhythm",
     "tier": "Gold",
-    "id": 1029,
-    "notes": "c"
+    "id": 1328,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/criticalrhythm_small.png",
+    "notes": ""
   },
   {
-    "name": "Light 'em Up",
-    "tier": "Silver",
-    "id": 1051,
-    "notes": "c"
-  },
-  {
-    "name": "Infinite Recursion",
+    "name": "Cruelty",
     "tier": "Prismatic",
-    "id": null,
+    "id": 1323,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/cruelty_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Dashing",
+    "tier": "Prismatic",
+    "id": 1019,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dashing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Dawnbringer's Resolve",
+    "tier": "Gold",
+    "id": 1020,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Deft",
+    "tier": "Silver",
+    "id": 1022,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/deft_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Demon's Dance",
+    "tier": "Gold",
+    "id": 1023,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/demonsdance_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Devil on Your Shoulder",
+    "tier": "Prismatic",
+    "id": 2007,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/littledevil_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Dimension Shift",
+    "tier": "Prismatic",
+    "id": 2063,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Dive Bomber",
+    "tier": "Silver",
+    "id": 1025,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/divebomber_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Divine Intervention",
+    "tier": "Gold",
+    "id": 1301,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Don't Blink",
+    "tier": "Silver",
+    "id": 1026,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dontblink_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Don't Change the Channel",
+    "tier": "Silver",
+    "id": 2131,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Donation",
+    "tier": "Gold",
+    "id": 1384,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/donation_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Double Strike",
+    "tier": "Silver",
+    "id": 2148,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/adamant_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Double Tap",
+    "tier": "Gold",
+    "id": 2010,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/doubletap_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Draw Your Sword",
+    "tier": "Prismatic",
+    "id": 1134,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/drawyoursword_small.png",
+    "notes": ""
+  },
+  {
+    "name": "DropBear",
+    "tier": "Prismatic",
+    "id": 2031,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/drop_bear_small.png",
     "notes": ""
   },
   {
     "name": "Dropkick",
     "tier": "Prismatic",
     "id": 2006,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/dropkick_small.png",
     "notes": "c"
   },
   {
-    "name": "Pursuit of Haste",
-    "tier": "Gold",
-    "id": 2100,
-    "notes": "c"
-  },
-  {
-    "name": "Upgrade Immolate",
-    "tier": "Silver",
-    "id": 1319,
-    "notes": "c"
-  },
-  {
-    "name": "Firefox",
-    "tier": "Silver",
-    "id": 1308,
-    "notes": "c"
-  },
-  {
-    "name": "Heavy Hitter",
-    "tier": "Silver",
-    "id": 1181,
-    "notes": "c"
-  },
-  {
-    "name": "Tank Engine",
-    "tier": "Gold",
-    "id": 1353,
-    "notes": "c"
-  },
-  {
-    "name": "Spirit Bomb",
+    "name": "Droppybara",
     "tier": "Prismatic",
-    "id": 2077,
+    "id": 1414,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/orbitallaser_small.png",
     "notes": ""
   },
   {
-    "name": "Ravenous Bind",
-    "tier": "Gold",
-    "id": 2104,
+    "name": "Dual Wield",
+    "tier": "Prismatic",
+    "id": 1225,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dualwield_small.png",
     "notes": ""
   },
   {
-    "name": "Overflow",
+    "name": "Earthwake",
+    "tier": "Prismatic",
+    "id": 1027,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/earthwake_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Echo Cast",
+    "tier": "Prismatic",
+    "id": 2062,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
+    "notes": ""
+  },
+  {
+    "name": "Empowered By The Faithful",
+    "tier": "Prismatic",
+    "id": 2004,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/empoweredbythefaithful_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Empyrean Promise",
+    "tier": "Prismatic",
+    "id": 1331,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/empyreampromise_small.png",
+    "notes": ""
+  },
+  {
+    "name": "En Passant",
+    "tier": "Prismatic",
+    "id": 2098,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/dashing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Endless Decimation",
     "tier": "Gold",
-    "id": 1311,
+    "id": 2091,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/endlessdecimate_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Erosion",
+    "tier": "Silver",
+    "id": 1028,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/erosion_small.png",
+    "notes": ""
+  },
+  {
+    "name": "escAPADe",
+    "tier": "Silver",
+    "id": 1206,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/escapade_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Escape Plan",
+    "tier": "Silver",
+    "id": 1333,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/escapeplan_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ethereal Weapon",
+    "tier": "Gold",
+    "id": 1029,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/etherealweapon_small.png",
     "notes": "c"
   },
   {
-    "name": "Searing Dawn",
-    "tier": "Gold",
-    "id": 1072,
-    "notes": ""
-  },
-  {
-    "name": "Titan's Resolve",
+    "name": "Eureka",
     "tier": "Prismatic",
-    "id": 2138,
+    "id": 1030,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/eureka_small.png",
     "notes": ""
   },
   {
-    "name": "Adaptive Ward",
-    "tier": "Silver",
-    "id": 1013,
-    "notes": ""
-  },
-  {
-    "name": "Celestial Body",
+    "name": "Executioner",
     "tier": "Gold",
-    "id": 1001,
+    "id": 1032,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/spiritualpurification_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Fan The Hammer",
+    "tier": "Prismatic",
+    "id": 1220,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/fanthehammer_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Feel the Burn",
+    "tier": "Prismatic",
+    "id": 1035,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/feeltheburn_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Fey Magic",
+    "tier": "Prismatic",
+    "id": 1194,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/feymagic_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Final City Transit",
+    "tier": "Gold",
+    "id": 1400,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/nightstalking_small.png",
     "notes": ""
   },
   {
     "name": "Final Form",
     "tier": "Prismatic",
     "id": 1344,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/finalform_small.png",
     "notes": ""
   },
   {
-    "name": "Get Excited",
+    "name": "Firebrand",
+    "tier": "Gold",
+    "id": 1036,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/firebrand_small.png",
+    "notes": ""
+  },
+  {
+    "name": "FireFox",
+    "tier": "Silver",
+    "id": 1308,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/firfox_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "First-Aid Kit",
+    "tier": "Silver",
+    "id": 1037,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/firstaidkit_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Flash 2",
+    "tier": "Silver",
+    "id": 1348,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/flash2_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Flashbang",
+    "tier": "Silver",
+    "id": 1187,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/flashbang_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Flashy",
+    "tier": "Gold",
+    "id": 1116,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/flashy_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Forged By The Master",
+    "tier": "Silver",
+    "id": 2127,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/forgedbythemaster_small.png",
+    "notes": ""
+  },
+  {
+    "name": "From Beginning To End",
+    "tier": "Gold",
+    "id": 1038,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/frombeginningtoend_small.png",
+    "notes": ""
+  },
+  {
+    "name": "From Downtown",
+    "tier": "Gold",
+    "id": 2103,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/questbangbang_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Frost Wraith",
+    "tier": "Silver",
+    "id": 1039,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/frostwraith_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Gash",
+    "tier": "Prismatic",
+    "id": 1321,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/darksteeltalons_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Get Excited!",
     "tier": "Gold",
     "id": 1322,
-    "notes": ""
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/getexcited_small.png",
+    "notes": "c"
   },
   {
-    "name": "Shadow Runner",
-    "tier": "Silver",
-    "id": 1027,
-    "notes": ""
-  },
-  {
-    "name": "Earthwake",
+    "name": "Giant Slayer",
     "tier": "Prismatic",
-    "id": 1073,
+    "id": 1195,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/giantslayer_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Glass Cannon",
+    "tier": "Prismatic",
+    "id": 1325,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/glasscannon_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Goldrend",
+    "tier": "Prismatic",
+    "id": 1335,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/goldrend_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Goliath",
+    "tier": "Prismatic",
+    "id": 1041,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/goliath_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Goredrink",
+    "tier": "Silver",
+    "id": 1138,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/goredrink_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Grandma's Chili Oil",
+    "tier": "Gold",
+    "id": 1406,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/grandmaschilioil_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Growth Spurt",
+    "tier": "Gold",
+    "id": 1401,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/growthspurt_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Guilty Pleasure",
+    "tier": "Silver",
+    "id": 1042,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/guiltypleasure_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Hand of Baron",
+    "tier": "Prismatic",
+    "id": 1389,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/handofbaron_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Hat on a Hat",
+    "tier": "Silver",
+    "id": 1341,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/hatonahat_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Heads Up Cupcake!",
+    "tier": "Prismatic",
+    "id": 2001,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/watchoutgrapefruit_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Heavy Hitter",
+    "tier": "Silver",
+    "id": 1181,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/heavyhitter_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Hellbent",
+    "tier": "Prismatic",
+    "id": 2107,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/hellbent_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Hextech Soul",
+    "tier": "Silver",
+    "id": 1416,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalsoul_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Hide on Bush",
+    "tier": "Gold",
+    "id": 2042,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/brushpower_small.png",
+    "notes": ""
+  },
+  {
+    "name": "High Roller",
+    "tier": "Prismatic",
+    "id": 2095,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/highroller_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Holy Fire",
+    "tier": "Gold",
+    "id": 1198,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/holyfire_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Holy Snowball",
+    "tier": "Prismatic",
+    "id": 1392,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/goldensnowball_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Homeguard",
+    "tier": "Silver",
+    "id": 1105,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/homeguard_small.png",
+    "notes": ""
+  },
+  {
+    "name": "I'm a Baby Kitty Where is Mama",
+    "tier": "Prismatic",
+    "id": 1372,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/babykitty_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Icathia's Fall",
+    "tier": "Prismatic",
+    "id": 1361,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/quest_voidimmolation_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Ice Cold",
+    "tier": "Silver",
+    "id": 1044,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/icecold_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Impassable",
+    "tier": "Gold",
+    "id": 1149,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/impassable_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Infernal Conduit",
+    "tier": "Prismatic",
+    "id": 1045,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalconduit_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Infernal Soul",
+    "tier": "Silver",
+    "id": 1046,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/infernalsoul_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Infinite Recursion",
+    "tier": "Prismatic",
+    "id": 1388,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/infiniterecursion_small.png",
+    "notes": ""
+  },
+  {
+    "name": "It's Critical",
+    "tier": "Gold",
+    "id": 1047,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/itscritical_small.png",
+    "notes": ""
+  },
+  {
+    "name": "It's Go Time",
+    "tier": "Silver",
+    "id": 2125,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
     "notes": ""
   },
   {
     "name": "It's Killing Time",
     "tier": "Gold",
     "id": 1211,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/itskillingtime_small.png",
     "notes": ""
   },
   {
-    "name": "From Downdown",
-    "tier": "Gold",
-    "id": 2103,
+    "name": "Jeweled Gauntlet",
+    "tier": "Prismatic",
+    "id": 1048,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png",
     "notes": ""
   },
   {
-    "name": "Scoped Weapons",
+    "name": "Juiced",
     "tier": "Silver",
-    "id": 1081,
+    "id": 2016,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/juiced_small.png",
     "notes": ""
   },
   {
-    "name": "Upgrade Infinity Edge",
+    "name": "Keystone Conjurer",
     "tier": "Gold",
-    "id": 1336,
+    "id": 1050,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/keystoneconjurer_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Kill Secured",
+    "tier": "Silver",
+    "id": 2026,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/killsecure_small.png",
+    "notes": ""
+  },
+  {
+    "name": "King Me",
+    "tier": "Prismatic",
+    "id": 1337,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/kingme_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Laser Heal",
+    "tier": "Prismatic",
+    "id": 1339,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/laseheal_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Leg Day",
+    "tier": "Silver",
+    "id": 1305,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/legday_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Light 'Em Up!",
+    "tier": "Silver",
+    "id": 1051,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/lightemup_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Lightning Strikes",
+    "tier": "Gold",
+    "id": 1052,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/lightningstrikes_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Lil' Extra Help",
+    "tier": "Gold",
+    "id": 2096,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Mad Scientist",
+    "tier": "Prismatic",
+    "id": 1053,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/madscientist_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Magic Missile",
+    "tier": "Gold",
+    "id": 1133,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/maps/particles/kiwi/magicmissile_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Marksmage",
+    "tier": "Gold",
+    "id": 1129,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/marksmage_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Master of Duality",
+    "tier": "Prismatic",
+    "id": 1054,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/masterofduality_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Mercy's Strike",
+    "tier": "Gold",
+    "id": 2133,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Mighty Shield",
+    "tier": "Silver",
+    "id": 1314,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/mightyshield_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Mind to Matter",
+    "tier": "Silver",
+    "id": 1056,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mindtomatter_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Minionmancer",
+    "tier": "Gold",
+    "id": 1104,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/minionmancer_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Mountain Soul",
+    "tier": "Silver",
+    "id": 1057,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mountainsoul_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Multishot",
+    "tier": "Prismatic",
+    "id": 2055,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
+    "notes": ""
+  },
+  {
+    "name": "Mystic Punch",
+    "tier": "Prismatic",
+    "id": 1058,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/mysticpunch_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Nature is Healing",
+    "tier": "Gold",
+    "id": 2043,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/natureishealing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Nightstalking",
+    "tier": "Gold",
+    "id": 1326,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/nightstalking_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ocean Soul",
+    "tier": "Silver",
+    "id": 1060,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/oceansoul_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ok Boomerang",
+    "tier": "Gold",
+    "id": 1061,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/okboomerang_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ominous Pact",
+    "tier": "Prismatic",
+    "id": 1332,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/wisdomofages_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Omni Soul",
+    "tier": "Prismatic",
+    "id": 1062,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/omnisoul_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Orbital Laser",
+    "tier": "Prismatic",
+    "id": 1208,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/orbitallaser_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Our Healing",
+    "tier": "Gold",
+    "id": 2082,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/equillibrium_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Outlaw's Grit",
+    "tier": "Gold",
+    "id": 1063,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/outlawsgrit_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Overextender",
+    "tier": "Gold",
+    "id": 2119,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/overextender_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Overflow",
+    "tier": "Gold",
+    "id": 1311,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/overflow_small.png",
     "notes": "c"
   },
   {
-    "name": "Tap Dancer",
+    "name": "Overloaded",
     "tier": "Prismatic",
-    "id": 1170,
+    "id": 2123,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
     "notes": ""
   },
   {
-    "name": "Spin Me Right Round",
+    "name": "Pat On The Back",
+    "tier": "Gold",
+    "id": 2137,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/patontheback_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Perseverance",
+    "tier": "Gold",
+    "id": 1064,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/perseverance_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Phenomenal Evil",
+    "tier": "Gold",
+    "id": 1390,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Pin Cushion",
+    "tier": "Prismatic",
+    "id": 2135,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/symphonyofwar_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Pinball",
+    "tier": "Gold",
+    "id": 1358,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/pinballsnowball_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Poltergeist",
     "tier": "Silver",
-    "id": 1386,
+    "id": 1347,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poltergeist_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Porcupine",
+    "tier": "Gold",
+    "id": 2139,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/pincushion_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Poro Blaster",
+    "tier": "Gold",
+    "id": 1409,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poroblast_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Poro Stampede",
+    "tier": "Prismatic",
+    "id": 2046,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/questporocharge_small.png",
     "notes": ""
   },
   {
     "name": "Pressure Cooker",
     "tier": "Gold",
     "id": 2102,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/questpressurecooker_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Prom Queen",
+    "tier": "Prismatic",
+    "id": 1421,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/promqueen_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Protein Shake",
+    "tier": "Prismatic",
+    "id": 1324,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/proteinshake_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Purist - Caster",
+    "tier": "Silver",
+    "id": 2018,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/puristcaster_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Pursuit of Haste",
+    "tier": "Gold",
+    "id": 2100,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": "c"
+  },
+  {
+    "name": "Pursuit of Power",
+    "tier": "Gold",
+    "id": 2116,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/marksmage_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Quantum Computing",
+    "tier": "Prismatic",
+    "id": 1066,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/quantumcomputing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Quickstep",
+    "tier": "Gold",
+    "id": 2064,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Ravenous Bind",
+    "tier": "Gold",
+    "id": 2077,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradehubris_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Recursion",
+    "tier": "Gold",
+    "id": 1068,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/recursion_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Red Envelopes",
+    "tier": "Gold",
+    "id": 1391,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/redenvelopes_small.png",
+    "notes": ""
+  },
+  {
+    "name": "ReEnergize",
+    "tier": "Silver",
+    "id": 1330,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/mobiuscoil_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Rejuvenation",
+    "tier": "Gold",
+    "id": 1067,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/rabblerousing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Reload",
+    "tier": "Gold",
+    "id": 2126,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/lightningstrikes_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Repulsor",
+    "tier": "Silver",
+    "id": 1069,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/repulsor_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Restless Restoration",
+    "tier": "Gold",
+    "id": 1070,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/restlessrestoration_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Rite of Ascension",
+    "tier": "Prismatic",
+    "id": 2099,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/glasscannon_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Scoped Weapons",
+    "tier": "Silver",
+    "id": 1170,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopedweapons_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Scopier Weapons",
+    "tier": "Gold",
+    "id": 1071,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopierweapons_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Scopiest Weapons",
+    "tier": "Prismatic",
+    "id": 1115,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/scopiestweapons_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Searing Dawn",
+    "tier": "Gold",
+    "id": 1072,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/searingdawn_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Self Destruct",
+    "tier": "Silver",
+    "id": 1108,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/maps/particles/kiwi/selfdestruct_small.mayhem_new_augments.png",
+    "notes": ""
+  },
+  {
+    "name": "Shadow Runner",
+    "tier": "Silver",
+    "id": 1073,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/shadowrunner_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Shark Bait",
+    "tier": "Gold",
+    "id": 2032,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/fishbait_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Shark Tempest",
+    "tier": "Gold",
+    "id": 2034,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/sharktempest_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Shrink Engine",
+    "tier": "Gold",
+    "id": 1373,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/shrinkengine_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Shrink Ray",
+    "tier": "Gold",
+    "id": 1074,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/shrinkray_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Siphon",
+    "tier": "Silver",
+    "id": 2073,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
+    "notes": ""
+  },
+  {
+    "name": "Skilled Sniper",
+    "tier": "Gold",
+    "id": 1113,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/skilledsniper_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Slap Around",
+    "tier": "Silver",
+    "id": 1136,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slaparound_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Slow And Steady",
+    "tier": "Gold",
+    "id": 1250,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slowandsteady_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Slow Cooker",
+    "tier": "Prismatic",
+    "id": 1075,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/slowcooker_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Snap Back",
+    "tier": "Gold",
+    "id": 2109,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Sneakerhead",
+    "tier": "Prismatic",
+    "id": 1343,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/sneakerhead_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Snowball Roulette",
+    "tier": "Gold",
+    "id": 1342,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/snowballupgrade_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Snowball Upgrade",
+    "tier": "Gold",
+    "id": 1334,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/snowballupgrade_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Snowblast",
+    "tier": "Gold",
+    "id": 2080,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/snowbomb_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Snowday",
+    "tier": "Silver",
+    "id": 2088,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/snowday_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Sonata",
+    "tier": "Gold",
+    "id": 1420,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/sonata_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Sonic Boom",
+    "tier": "Silver",
+    "id": 1076,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/sonicboom_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Soul Eater",
+    "tier": "Gold",
+    "id": 1375,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/souleater_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Soul Siphon",
+    "tier": "Gold",
+    "id": 1077,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/soulsiphon_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Speed Demon",
+    "tier": "Silver",
+    "id": 1405,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/speeddemon_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Spell Split",
+    "tier": "Prismatic",
+    "id": 2072,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
+    "notes": ""
+  },
+  {
+    "name": "Spin Me Right Round",
+    "tier": "Silver",
+    "id": 1386,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/youspinmerightround_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Spin To Win",
+    "tier": "Silver",
+    "id": 1214,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/spintowin_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Spirit Bomb",
+    "tier": "Prismatic",
+    "id": 2104,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/spiritbomb_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Spiritual Purification",
+    "tier": "Gold",
+    "id": 1345,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/spiritualpurification_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Squishy Slappy Grab",
+    "tier": "Prismatic",
+    "id": 2115,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stackosaurus Rex",
+    "tier": "Silver",
+    "id": 1204,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stats on Stats on Stats!",
+    "tier": "Prismatic",
+    "id": 1402,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/statsonstatsonstats_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stats on Stats!",
+    "tier": "Gold",
+    "id": 1403,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/statsonstats_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stats!",
+    "tier": "Silver",
+    "id": 1404,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/stats_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stay Resolute",
+    "tier": "Silver",
+    "id": 2076,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
+    "notes": ""
+  },
+  {
+    "name": "Steel Your Heart",
+    "tier": "Gold",
+    "id": 1152,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/quest_steelyourheart_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Stuck In Here With Me",
+    "tier": "Prismatic",
+    "id": 1413,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/stuckinherewithme_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Support Main",
+    "tier": "Silver",
+    "id": 2108,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/questsupportmain_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Surge Field",
+    "tier": "Prismatic",
+    "id": 2134,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/surgefield_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Swift and Safe",
+    "tier": "Silver",
+    "id": 1315,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/swiftandsafe_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Symphony of War",
+    "tier": "Prismatic",
+    "id": 1079,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/symphonyofwar_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Tank Engine",
+    "tier": "Gold",
+    "id": 1353,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tank_engine_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Tank It Or Leave It",
+    "tier": "Silver",
+    "id": 1080,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tankitorleaveit_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Tap Dancer",
+    "tier": "Prismatic",
+    "id": 1081,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tapdancer_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Terrain'd",
+    "tier": "Gold",
+    "id": 2129,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/lightningstrikes_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Terror",
+    "tier": "Gold",
+    "id": 2065,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/desecrator_large.png",
+    "notes": ""
+  },
+  {
+    "name": "The Brutalizer",
+    "tier": "Silver",
+    "id": 1082,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/thebrutalizer_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Thread the Needle",
+    "tier": "Gold",
+    "id": 1084,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/threadtheneedle_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Titan's Resolve",
+    "tier": "Prismatic",
+    "id": 1001,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Tooth Fairy",
+    "tier": "Gold",
+    "id": 2083,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/questburstingteeth_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Tormentor",
+    "tier": "Silver",
+    "id": 1085,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/tormentor_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Transmute: Chaos",
+    "tier": "Prismatic",
+    "id": 1243,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmutechaos_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Transmute: Gold",
+    "tier": "Silver",
+    "id": 1237,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmutegold_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Transmute: Prismatic",
+    "tier": "Gold",
+    "id": 1238,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/transmuteprismatic_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Triggered Inferno",
+    "tier": "Prismatic",
+    "id": 2005,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/madscientist_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Tripleshot",
+    "tier": "Prismatic",
+    "id": 2054,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
+    "notes": ""
+  },
+  {
+    "name": "Trueshot Prodigy",
+    "tier": "Prismatic",
+    "id": 1086,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/trueshotprodigy_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Trusty Weapon",
+    "tier": "Silver",
+    "id": 2136,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png",
+    "notes": ""
+  },
+  {
+    "name": "Twice Thrice",
+    "tier": "Gold",
+    "id": 1107,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/twicethrice_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Twin Fire",
+    "tier": "Silver",
+    "id": 1415,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/twinfire_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Typhoon",
+    "tier": "Silver",
+    "id": 1087,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/typhoon_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ult Bot",
+    "tier": "Prismatic",
+    "id": 2118,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/skipthebasic_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ultimate Awakening",
+    "tier": "Prismatic",
+    "id": 1349,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/zerohour_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ultimate Revolution",
+    "tier": "Prismatic",
+    "id": 1088,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/ultimaterevolution_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Ultimate Unstoppable",
+    "tier": "Silver",
+    "id": 1112,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Collector",
+    "tier": "Silver",
+    "id": 1320,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradecollector_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Cutlass",
+    "tier": "Silver",
+    "id": 1317,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradecutlass_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Hubris",
+    "tier": "Gold",
+    "id": 1338,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradehubris_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Immolate",
+    "tier": "Silver",
+    "id": 1319,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradeimmolate_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Upgrade Infinity Edge",
+    "tier": "Gold",
+    "id": 1336,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradeie_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Upgrade Mikael's Blessing",
+    "tier": "Prismatic",
+    "id": 1340,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgrademikaelsblessing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Sheen",
+    "tier": "Gold",
+    "id": 1996,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradesheen_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Sword of Blossoming Dawn",
+    "tier": "Prismatic",
+    "id": 1379,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgrademikaelsblessing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Thornmail",
+    "tier": "Silver",
+    "id": 1411,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradecollector_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Upgrade Zhonya's",
+    "tier": "Silver",
+    "id": 1318,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/upgradezh_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Urf's Champion",
+    "tier": "Prismatic",
+    "id": 1154,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/quest_urfschampion_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Vampirism",
+    "tier": "Gold",
+    "id": 1346,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/vampired_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Veil of Warding",
+    "tier": "Silver",
+    "id": 1034,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/poltergeist_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Void Dash",
+    "tier": "Gold",
+    "id": 2097,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
+    "notes": ""
+  },
+  {
+    "name": "Void Rift",
+    "tier": "Prismatic",
+    "id": 2002,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/voidrift_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Vulnerability",
+    "tier": "Gold",
+    "id": 1092,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/vulnerability_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Warlock Juicebox",
+    "tier": "Gold",
+    "id": 2132,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Wee Woo Wee Woo",
+    "tier": "Gold",
+    "id": 1005,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/weewooweewoo_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Weighted Popoffs",
+    "tier": "Silver",
+    "id": 2008,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/weightedpopoffs_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Wind Beneath Blade",
+    "tier": "Silver",
+    "id": 1316,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/windbeneathblade_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Windspeaker's Blessing",
+    "tier": "Prismatic",
+    "id": 1095,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/windspeakersblessing_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Witchful Thinking",
+    "tier": "Silver",
+    "id": 1097,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/witchfulthinking_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "With Haste",
+    "tier": "Gold",
+    "id": 1098,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/withhaste_small.png",
+    "notes": "c"
+  },
+  {
+    "name": "Wooglet's Witchcap",
+    "tier": "Prismatic",
+    "id": 1156,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/cherry/augments/icons/quest_woogletswitchcap_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Yowch, My Coins!",
+    "tier": "Gold",
+    "id": 2089,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/youchmycoins_small.png",
+    "notes": ""
+  },
+  {
+    "name": "Zealot",
+    "tier": "Silver",
+    "id": 2009,
+    "icon": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/ux/kiwi/augments/icons/zealot_small.png",
     "notes": ""
   }
 ]

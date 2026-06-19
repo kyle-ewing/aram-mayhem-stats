@@ -6,7 +6,7 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom'
-import { getChampions, getSynergies } from './api'
+import { getChampions, getStats, getSynergies } from './api'
 import './App.css'
 import AugmentManager from './components/AugmentManager'
 import ProvenanceNote from './components/ProvenanceNote'
@@ -18,17 +18,19 @@ export default function App() {
   const [error, setError] = useState(null)
   const [champions, setChampions] = useState([])
   const [synergies, setSynergies] = useState([])
+  const [totalGames, setTotalGames] = useState(null)
 
   useEffect(() => {
     let active = true
     setLoading(true)
     setError(null)
 
-    Promise.all([getChampions(), getSynergies()])
-      .then(([champs, syns]) => {
+    Promise.all([getChampions(), getSynergies(), getStats()])
+      .then(([champs, syns, stats]) => {
         if (!active) return
         setChampions(champs ?? [])
         setSynergies(syns ?? [])
+        setTotalGames(stats?.totalGames ?? null)
       })
       .catch((err) => {
         if (active) setError(err.message || 'Something went wrong.')
@@ -79,6 +81,7 @@ export default function App() {
                 champions={champions}
                 loading={loading}
                 error={error}
+                totalGames={totalGames}
               />
             }
           />

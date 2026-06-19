@@ -81,6 +81,13 @@ def test_ingest_non_json_returns_400(client):
     assert "error" in resp.get_json()
 
 
+def test_stats_total_games(client):
+    assert client.get("/api/stats").get_json() == {"totalGames": 0}
+    _ingest(client, make_payload([make_participant(champion_id=99)], game_id=1))
+    _ingest(client, make_payload([make_participant(champion_id=99)], game_id=2))
+    assert client.get("/api/stats").get_json() == {"totalGames": 2}
+
+
 def test_champions_list_shape(client):
     _ingest(
         client,

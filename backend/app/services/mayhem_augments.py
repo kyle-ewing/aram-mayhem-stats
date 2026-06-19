@@ -106,6 +106,11 @@ def update_mayhem_augment(
     if collision:
         raise ValidationError(f"Augment '{record['name']}' is already in the list")
 
+    # The edit form does not carry the icon, so keep the existing one on update.
+    old = augments[index]
+    if "icon" not in record and isinstance(old, dict) and old.get("icon"):
+        record["icon"] = old["icon"]
+
     augments[index] = record
     _write_atomic(file_path, augments)
     return record
@@ -145,12 +150,19 @@ def _normalize_entry(entry: object) -> dict:
     if not isinstance(notes, str):
         raise ValidationError("Augment 'notes' must be a string")
 
-    return {
+    record = {
         "name": name.strip(),
         "tier": tier,
         "id": augment_id,
         "notes": notes.strip(),
     }
+
+    # icon is optional display metadata (a full image URL). Only carry it when
+    # present so hand-added augments stay {name, tier, id, notes}.
+    icon = entry.get("icon")
+    if isinstance(icon, str) and icon.strip():
+        record["icon"] = icon.strip()
+    return record
 
 
 def _write_atomic(file_path: str, data: list) -> None:

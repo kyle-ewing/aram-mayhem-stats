@@ -18,6 +18,9 @@ POST /api/ingest/match
     400 {"error": <str>}                            validation failure
     Body: the canonical ingest payload (see collector/INGEST_CONTRACT.md).
 
+GET  /api/stats
+    {"totalGames": <int>}                 count of ingested matches (games parsed)
+
 GET  /api/champions
     [ {championId, championName, iconUrl, games, wins, winRate}, ... ]
     Sorted by games desc, then winRate desc.
@@ -62,6 +65,7 @@ from ..services.stats import (
     augment_leaderboard,
     champion_detail,
     champion_winrates,
+    total_games,
 )
 from ..services.synergies import get_synergies
 from ..services.mayhem_augments import (
@@ -86,6 +90,11 @@ def ingest():
     result = ingest_match(payload)
     status_code = 201 if result["status"] == "created" else 200
     return jsonify(result), status_code
+
+
+@bp.get("/stats")
+def stats():
+    return jsonify({"totalGames": total_games()})
 
 
 @bp.get("/champions")

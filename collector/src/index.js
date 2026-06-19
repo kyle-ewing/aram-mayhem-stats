@@ -15,14 +15,20 @@ function sleep(ms) {
 
 async function processNewGames(ctx) {
   const { lcu, config, seen, resolveChampionName } = ctx;
+  const pageSize = config.matchHistoryPageSize;
+
+  console.log(
+    `[collector] pulse: scanning match history ${ctx.begIndex}..${ctx.begIndex + pageSize - 1}`,
+  );
 
   const summoner = await lcu.getCurrentSummoner();
-  const recent = await lcu.getRecentGames(summoner?.puuid, config.matchHistoryPageSize);
+  const recent = await lcu.getRecentGames(summoner?.puuid, pageSize, ctx.begIndex);
 
   const mayhemGames = recent.filter(
     (g) => Number(g?.queueId) === config.mayhemQueueId && !seen.has(g?.gameId),
   );
 
+  let uploaded = 0;
   for (const summary of mayhemGames) {
     const gameId = summary.gameId;
     try {
@@ -43,6 +49,7 @@ async function processNewGames(ctx) {
       const { result, status } = await uploadMatch(config, payload);
       if (result === UploadResult.SUCCESS) {
         await seen.add(gameId);
+        uploaded += 1;
         console.log(`[collector] uploaded game ${gameId} (HTTP ${status})`);
       }
       else if (result === UploadResult.RATE_LIMITED) {
@@ -57,19 +64,38 @@ async function processNewGames(ctx) {
       console.warn(`[collector] failed to process game ${gameId} (${err.message}); will retry next poll`);
     }
   }
+
+  console.log(
+    `[collector] pulse done: grabbed ${uploaded} new game(s) ` +
+      `(page returned ${recent.length}, ${mayhemGames.length} new mayhem)`,
+  );
+
+  // Advance the paging window so the next pulse grabs the next 100 older games.
+  // A short page means we reached the end of retained history, so wrap back to
+  // the most recent page to keep catching newly played games (seen-dedup makes
+  // the re-scan cheap). Only advance after a fully processed page so a mid-page
+  // failure does not skip games.
+  if (recent.length < pageSize) {
+    ctx.begIndex = 0;
+  }
+  else {
+    ctx.begIndex += pageSize;
+  }
 }
 
 async function main() {
   const config = loadConfig();
   console.log(
     `[collector] backend=${config.backendBaseUrl}${config.ingestPath} ` +
-      `queueId=${config.mayhemQueueId} pollMs=${config.pollIntervalMs}`,
+      `queueId=${config.mayhemQueueId} pollMs=${config.pollIntervalMs} ` +
+      `pageSize=${config.matchHistoryPageSize}`,
   );
 
   const seen = await new SeenStore(config.seenFile).load();
   const resolveChampionName = await buildChampionResolver(config.ddragonVersion);
   const lcu = new LcuClient();
-  const ctx = { lcu, config, seen, resolveChampionName };
+  // begIndex is the paging cursor into match history; it advances each pulse.
+  const ctx = { lcu, config, seen, resolveChampionName, begIndex: 0 };
 
   // Connection plus poll loop. A dropped client resets credentials and reconnects.
   for (;;) {

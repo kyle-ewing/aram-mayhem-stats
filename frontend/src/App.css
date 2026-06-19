@@ -86,6 +86,38 @@
   border-color: #5b6cff;
 }
 
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9a9aa5;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.sort-select {
+  background: #14141a;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  color: #e8e8ea;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #5b6cff;
+}
+
+.games-parsed {
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #2c2c38;
+  color: #8a8a95;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 .champion-grid {
   list-style: none;
   margin: 0;
@@ -375,6 +407,76 @@
 .augment-manager h3 {
   margin: 2rem 0 0.75rem;
   font-size: 1.1rem;
+}
+
+.augment-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.augment-name-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.augment-row-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.augment-filter {
+  flex: 1 1 240px;
+  min-width: 0;
+  background: #14141a;
+  border: 1px solid #2c2c38;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  color: #e8e8ea;
+  font: inherit;
+}
+
+.augment-filter:focus {
+  outline: none;
+  border-color: #5b6cff;
+}
+
+.th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.th-sort:hover {
+  color: #e8e8ea;
+}
+
+.th-sort.active {
+  color: #5b6cff;
+}
+
+.th-sort:focus-visible {
+  outline: 2px solid #5b6cff;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.sort-arrow {
+  font-size: 0.7em;
+  line-height: 1;
 }
 
 .augment-form {

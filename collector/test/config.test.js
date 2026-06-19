@@ -6,7 +6,8 @@ test("defaults apply when nothing is set", () => {
   const cfg = loadConfig({}, []);
   assert.equal(cfg.backendBaseUrl, DEFAULTS.backendBaseUrl);
   assert.equal(cfg.mayhemQueueId, 2400);
-  assert.equal(cfg.pollIntervalMs, 60000);
+  assert.equal(cfg.pollIntervalMs, 150000);
+  assert.equal(cfg.matchHistoryPageSize, 100);
   assert.equal(cfg.ingestPath, "/api/ingest/match");
 });
 

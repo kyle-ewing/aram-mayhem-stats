@@ -50,6 +50,27 @@ def test_add_defaults_id_and_notes(data_file):
     assert record == {"name": "Vanish", "tier": "Silver", "id": None, "notes": ""}
 
 
+def test_add_keeps_icon_when_present(data_file):
+    record = svc.add_mayhem_augment(
+        {"name": "Deft", "tier": "Silver", "id": 1022, "icon": "https://x/deft.png"},
+        data_file,
+    )
+    assert record["icon"] == "https://x/deft.png"
+
+
+def test_update_preserves_existing_icon_when_omitted(data_file):
+    svc.add_mayhem_augment(
+        {"name": "Deft", "tier": "Silver", "id": 1022, "icon": "https://x/deft.png"},
+        data_file,
+    )
+    # The edit form sends no icon; the stored icon should survive the update.
+    updated = svc.update_mayhem_augment(
+        "Deft", {"name": "Deft", "tier": "Gold", "id": 1022}, data_file
+    )
+    assert updated["tier"] == "Gold"
+    assert updated["icon"] == "https://x/deft.png"
+
+
 def test_add_rejects_missing_name(data_file):
     with pytest.raises(ValidationError):
         svc.add_mayhem_augment({"tier": "Gold"}, data_file)

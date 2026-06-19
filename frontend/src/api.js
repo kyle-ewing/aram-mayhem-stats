@@ -39,6 +39,14 @@ export async function getHealth() {
 }
 
 /**
+ * Fetch aggregate stats about the dataset.
+ * @returns {Promise<{totalGames: number}>} count of ingested matches (games parsed)
+ */
+export async function getStats() {
+  return request('/api/stats')
+}
+
+/**
  * Fetch the champion leaderboard (sorted games desc, then winRate desc).
  * May be an EMPTY array at cold start before collectors feed data.
  *
