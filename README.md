@@ -1,4 +1,4 @@
-# aram-mayhem-stats
+# Aram Mayhem Stats
 
 A web app that surfaces **ARAM Mayhem statistics** from *League of Legends*. It is
 champion-centric: browse a grid of champions, open a champion to see its ARAM Mayhem
@@ -31,17 +31,6 @@ Champion and augment static data (names, icons) stays **keyless**, pulled from D
 and Community Dragon, so the core product needs no Riot API key. `RIOT_API_KEY` is now
 optional and unused by the core flow.
 
-## ARAM Mayhem mode notes
-
-ARAM Mayhem is a **permanent mode** as of patch **26.12**. That patch removed traits, added
-Ability and Quest augments, and rotated the augment pool, so any augment ids cached from
-before 26.12 are stale.
-
-The curated **synergy notes** served at `/api/synergies` are editorial. They are
-community/editorial commentary on champion plus augment combinations that play well
-together, not measured win rates. Measured win rates always come from ingested match data
-and carry sample sizes.
-
 ## Prerequisites
 
 - **Python 3.11+** for the backend (the default `python` on this machine is 3.6.8, which is
@@ -63,15 +52,8 @@ venv, so it is safe to use as your everyday start command:
 bash backend/dev.sh
 ```
 
-`RIOT_API_KEY` is not required for the core product. If you prefer to run the steps
-yourself instead of the script, see `backend/dev.sh` for the exact commands.
-
 On first run the database is empty, so champion and augment endpoints return empty lists and
 the frontend shows a cold-start state. Data appears once collectors start ingesting games.
-
-The static-data versions are configurable in `.env`: `CDRAGON_VERSION` (default `latest`)
-pins the Community Dragon augment data, and `DDRAGON_VERSION` (default `14.10.1`) pins the
-Data Dragon version used for champion icons.
 
 ### Collector
 
@@ -96,41 +78,6 @@ cd frontend
 npm install
 npm run dev                     # serves http://127.0.0.1:5173, proxies /api -> backend
 ```
-
-## Dev container (sandboxed Claude Code)
-
-The `.devcontainer/` directory defines an isolated Linux container for running
-[Claude Code](https://code.claude.com/docs/en/devcontainer), including
-`--dangerously-skip-permissions` (bypass) mode, without giving the agent access to your
-host. Command execution and network egress happen inside the container; your repo is
-bind-mounted so edits still land in your local working tree.
-
-**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) (WSL2
-backend) and the VS Code [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
-
-1. Open the repo in VS Code, then **Ctrl+Shift+P, Dev Containers: Reopen in Container**.
-   The first build installs the toolchain plus both stacks (`backend/.venv` +
-   `npm install`) via `.devcontainer/post-create.sh`.
-2. After the build, the firewall (`init-firewall.sh`) locks outbound traffic to an
-   allowlist (Anthropic API, GitHub, npm, PyPI, Data Dragon, Community Dragon
-   (raw.communitydragon.org), and the Riot API hosts) and prints
-   `Firewall configuration complete`.
-3. Open a terminal and sign in: `claude` (auth persists across rebuilds via a named volume).
-   You run in normal prompted mode; the agent asks before each tool call.
-
-Bypass (`--dangerously-skip-permissions`) mode is **disabled** in this container:
-`.devcontainer/managed-settings.json` sets `permissions.disableBypassPermissionsMode` to
-`disable`, delivered to `/etc/claude-code/managed-settings.json` at the top of the settings
-hierarchy, so the flag is rejected even if passed. To re-enable it, remove that setting and
-rebuild.
-
-Inside the container the stack is Linux, so use the venv's POSIX paths
-(`backend/.venv/bin/python run.py`), not `.venv\Scripts`. Ports **5000** (Flask) and
-**5173** (Vite) are forwarded to your host. The LCU collector reads a local League client,
-so it runs on your host machine (where League runs), not inside this container.
-
-> The firewall pins each allowed domain's IPs at startup. If a CDN rotates IPs mid-session,
-> re-run `sudo /usr/local/bin/init-firewall.sh` to refresh them.
 
 ## Project layout
 
