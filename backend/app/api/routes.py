@@ -31,6 +31,13 @@ GET  /api/champions/<championId>          (championId is the numeric Riot id)
                       games, wins, winRate}, ... ]}
     404 {"error": <str>}                  champion has no ingested games
 
+GET  /api/champions/<championId>/items    (championId is the numeric Riot id)
+    200 {championId, championName, iconUrl, games, wins, winRate,
+         items: [ {itemId, itemName, iconUrl, damageType,
+                   games, wins, winRate}, ... ],
+         builds: [ {build, games, wins, winRate}, ... ]}
+    404 {"error": <str>}                  champion has no ingested games
+
 GET  /api/augments
     [ {augmentId, augmentName, iconUrl, rarity, games, wins, winRate}, ... ]
     Sorted by games desc, then winRate desc.
@@ -64,6 +71,7 @@ from ..services.ingest import ingest_match
 from ..services.stats import (
     augment_leaderboard,
     champion_detail,
+    champion_itemization,
     champion_winrates,
     total_games,
 )
@@ -105,6 +113,14 @@ def champions():
 @bp.get("/champions/<int:champion_id>")
 def champion(champion_id: int):
     detail = champion_detail(champion_id)
+    if detail is None:
+        raise NotFoundError(f"No data for champion {champion_id}")
+    return jsonify(detail)
+
+
+@bp.get("/champions/<int:champion_id>/items")
+def champion_items(champion_id: int):
+    detail = champion_itemization(champion_id)
     if detail is None:
         raise NotFoundError(f"No data for champion {champion_id}")
     return jsonify(detail)

@@ -109,6 +109,26 @@
   border-color: #5b6cff;
 }
 
+.augment-occurrence h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.augment-occurrence h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Compact summary table at the top of the occurrences page. */
+.summary-table {
+  max-width: 360px;
+}
+
+.summary-table .summary-total td {
+  font-weight: 700;
+  border-top: 2px solid #2c2c38;
+}
+
 .games-parsed {
   margin: 2rem 0 0;
   padding-top: 1rem;
@@ -123,7 +143,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 0.75rem;
 }
 
@@ -154,17 +174,29 @@
   flex: 0 0 auto;
 }
 
+/* Name and stats stack vertically so the name gets the full card width and the
+   stats sit on their own line, never pushed out of the card. */
+.card-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
 .card-name {
   font-weight: 600;
-  flex: 1 1 auto;
+  /* min-width:0 on the body lets a long name ellipsis instead of overflowing. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-stats {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.1rem;
-  flex: 0 0 auto;
+  align-items: baseline;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .wr {
@@ -277,6 +309,54 @@
 
 .augment-name {
   flex: 1 1 auto;
+}
+
+/* ---- Itemization page ---- */
+.detail-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #7f9bff;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.detail-link:hover {
+  text-decoration: underline;
+}
+
+.damage-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+}
+
+.damage-AD {
+  color: #f2a25c;
+  background: #34281c;
+  border-color: #5a4023;
+}
+
+.damage-AP {
+  color: #7fbfff;
+  background: #1c2434;
+  border-color: #2a3f6a;
+}
+
+.damage-mixed {
+  color: #5fd0c0;
+  background: #1c302e;
+  border-color: #2a564f;
+}
+
+.damage-other {
+  color: #c9ccd6;
+  background: #2c2c38;
+  border-color: #3c3c4a;
 }
 
 /* ---- Rarity badges ---- */

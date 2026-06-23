@@ -22,6 +22,38 @@ from ..errors import NotFoundError, RateLimitError, RiotApiError
 # Network timeout (connect, read) in seconds.
 _TIMEOUT = 10
 
+# Data Dragon publishes its version list here, newest first. Resolved once and
+# cached so champion icons track the current patch (newly released champions are
+# missing from an old pinned version). Falls back to Config.DDRAGON_VERSION.
+_DDRAGON_VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json"
+_latest_version: Optional[str] = None
+
+
+def latest_ddragon_version(
+    session: Optional[requests.Session] = None,
+) -> str:
+    """Return the newest Data Dragon version, cached for the process.
+
+    Keyless GET of the public versions list. On any failure (unreachable,
+    non-2xx, malformed) it returns ``Config.DDRAGON_VERSION`` without caching,
+    so a later call can still succeed once Data Dragon is reachable.
+    """
+    global _latest_version
+    if _latest_version is not None:
+        return _latest_version
+
+    http = session or requests.Session()
+    try:
+        resp = http.get(_DDRAGON_VERSIONS_URL, timeout=_TIMEOUT)
+        if 200 <= resp.status_code < 300:
+            data = resp.json()
+            if isinstance(data, list) and data and isinstance(data[0], str):
+                _latest_version = data[0]
+                return _latest_version
+    except (requests.RequestException, ValueError):
+        pass
+    return Config.DDRAGON_VERSION
+
 # Community Dragon asset paths are served relative to this base. Icon paths in
 # the arena bundle are sometimes absolute under the game-data plugin; this prefix
 # is stripped before joining so both forms resolve to the same URL.
@@ -64,9 +96,10 @@ def champion_icon_url(
 
     ``champion_name`` is the Data Dragon champion id, which match-v5 exposes as
     ``participant.championName`` (e.g. ``"MonkeyKing"``, ``"Fiddlesticks"``).
-    ``version`` defaults to ``Config.DDRAGON_VERSION``.
+    ``version`` defaults to the latest Data Dragon version (resolved and cached),
+    falling back to ``Config.DDRAGON_VERSION``.
     """
-    ddragon_version = version if version is not None else Config.DDRAGON_VERSION
+    ddragon_version = version if version is not None else latest_ddragon_version()
     return (
         f"https://ddragon.leagueoflegends.com/cdn/{ddragon_version}"
         f"/img/champion/{champion_name}.png"

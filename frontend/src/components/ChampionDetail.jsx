@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getChampion } from '../api'
 import Icon from './Icon'
 import AugmentWinrateTable from './AugmentWinrateTable'
@@ -95,6 +96,9 @@ export default function ChampionDetail({
               ) : (
                 <p className="muted">No measured games yet</p>
               )}
+              <Link className="detail-link" to={`/champions/${championId}/items`}>
+                View itemization stats
+              </Link>
             </div>
           </div>
 

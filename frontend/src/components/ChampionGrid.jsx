@@ -80,15 +80,19 @@ export default function ChampionGrid({ champions, onSelect }) {
                 onClick={() => onSelect(c)}
               >
                 <Icon url={c.iconUrl} className="card-icon" />
-                <span className="card-name">{c.championName}</span>
-                <span className="card-stats">
-                  <span
-                    className={isLowSample(c.games) ? 'wr low' : 'wr'}
-                    title={isLowSample(c.games) ? 'Low sample size' : undefined}
-                  >
-                    {percent(c.winRate)}
+                <span className="card-body">
+                  <span className="card-name" title={c.championName}>
+                    {c.championName}
                   </span>
-                  <span className="muted">{number(c.games)} games</span>
+                  <span className="card-stats">
+                    <span
+                      className={isLowSample(c.games) ? 'wr low' : 'wr'}
+                      title={isLowSample(c.games) ? 'Low sample size' : undefined}
+                    >
+                      {percent(c.winRate)}
+                    </span>
+                    <span className="muted">{number(c.games)} games</span>
+                  </span>
                 </span>
               </button>
             </li>

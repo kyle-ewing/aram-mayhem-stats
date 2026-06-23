@@ -10,7 +10,9 @@ import { getChampions, getStats, getSynergies } from './api'
 import './App.css'
 import AugmentManager from './components/AugmentManager'
 import ProvenanceNote from './components/ProvenanceNote'
+import AugmentOccurrencePage from './pages/AugmentOccurrencePage'
 import ChampionDetailPage from './pages/ChampionDetailPage'
+import ChampionItemizationPage from './pages/ChampionItemizationPage'
 import ChampionsPage from './pages/ChampionsPage'
 
 export default function App() {
@@ -66,6 +68,9 @@ export default function App() {
           >
             Champions
           </NavLink>
+          <NavLink to="/augment-occurrences" className={navClass}>
+            Augment occurrences
+          </NavLink>
           <NavLink to="/augments" className={navClass}>
             Manage augments
           </NavLink>
@@ -86,6 +91,10 @@ export default function App() {
             }
           />
           <Route
+            path="/champions/:championId/items"
+            element={<ChampionItemizationPage />}
+          />
+          <Route
             path="/champions/:championId"
             element={
               <ChampionDetailPage
@@ -94,6 +103,10 @@ export default function App() {
                 loading={loading}
               />
             }
+          />
+          <Route
+            path="/augment-occurrences"
+            element={<AugmentOccurrencePage />}
           />
           <Route path="/augments" element={<AugmentManager />} />
           <Route path="*" element={<Navigate to="/" replace />} />

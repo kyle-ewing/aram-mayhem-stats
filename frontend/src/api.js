@@ -99,6 +99,50 @@ export async function getChampion(championId) {
 }
 
 /**
+ * Fetch one champion's itemization win rates: per legendary item built, plus
+ * the AD, AP, mixed, and other build buckets. Returns null when the backend has NO
+ * ingested games for the champion (HTTP 404), so callers can show a graceful
+ * "no data yet" state instead of a hard error.
+ *
+ * The `items` array arrives sorted by games desc, then winRate desc. The
+ * `builds` array is ALWAYS exactly four entries in this order: AD, AP, mixed, other.
+ *
+ * @param {number|string} championId - numeric Riot champion id
+ * @returns {Promise<null | {
+ *   championId: number,
+ *   championName: string,
+ *   iconUrl: string|null,
+ *   games: number,
+ *   wins: number,
+ *   winRate: number,
+ *   items: Array<{
+ *     itemId: number,
+ *     itemName: string,
+ *     iconUrl: string|null,
+ *     damageType: "AD"|"AP"|"other",
+ *     games: number,
+ *     wins: number,
+ *     winRate: number
+ *   }>,
+ *   builds: Array<{
+ *     build: "AD"|"AP"|"other",
+ *     games: number,
+ *     wins: number,
+ *     winRate: number
+ *   }>
+ * }>}
+ */
+export async function getChampionItems(championId) {
+  try {
+    return await request(`/api/champions/${encodeURIComponent(championId)}/items`)
+  }
+  catch (err) {
+    if (err.status === 404) return null
+    throw err
+  }
+}
+
+/**
  * Fetch the augment leaderboard across all champions.
  * May be an EMPTY array at cold start.
  *

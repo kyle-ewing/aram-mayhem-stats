@@ -41,7 +41,9 @@ class Config:
         if origin.strip()
     ]
 
-    # Riot static-data / Data Dragon version used for champion lookups.
+    # Data Dragon version FALLBACK for champion icons. By default the app resolves
+    # the latest version from Data Dragon at runtime (so new champions get icons);
+    # this value is only used if that lookup fails or is overridden via the env.
     DDRAGON_VERSION: str = os.environ.get("DDRAGON_VERSION", "14.10.1")
 
     # Community Dragon version used for the arena augment static-data fetch.

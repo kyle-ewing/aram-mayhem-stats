@@ -24,6 +24,12 @@ from app import create_app  # noqa: E402
 from app import db as _db  # noqa: E402
 from app.config import Config  # noqa: E402
 from app.db import init_db  # noqa: E402
+from app.riot import augments as _augments  # noqa: E402
+
+# Seed the Data Dragon version cache so champion-icon URLs never trigger a live
+# versions.json fetch during tests. Tests that exercise the resolver itself
+# (with ``responses``) reset this via monkeypatch.
+_augments._latest_version = "14.10.1"
 
 
 @pytest.fixture

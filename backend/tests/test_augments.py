@@ -6,7 +6,10 @@ import responses
 
 from app.config import Config
 from app.errors import NotFoundError, RateLimitError, RiotApiError
-from app.riot import champion_icon_url, fetch_augments
+from app.riot import champion_icon_url, fetch_augments, latest_ddragon_version
+from app.riot import augments as augmod
+
+_VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json"
 
 _VERSION = "latest"
 _ARENA_URL = (
@@ -134,4 +137,37 @@ def test_champion_icon_url_uses_ddragon_version():
     assert url == (
         "https://ddragon.leagueoflegends.com/cdn/14.10.1"
         "/img/champion/MonkeyKing.png"
+    )
+
+
+@responses.activate
+def test_latest_ddragon_version_returns_newest(monkeypatch):
+    monkeypatch.setattr(augmod, "_latest_version", None)
+    responses.add(
+        responses.GET, _VERSIONS_URL, json=["16.12.1", "16.11.1", "16.10.1"], status=200
+    )
+    assert latest_ddragon_version() == "16.12.1"
+
+
+@responses.activate
+def test_latest_ddragon_version_caches_after_first_lookup(monkeypatch):
+    monkeypatch.setattr(augmod, "_latest_version", None)
+    responses.add(responses.GET, _VERSIONS_URL, json=["16.12.1"], status=200)
+    latest_ddragon_version()
+    latest_ddragon_version()
+    # Cached: only one HTTP call despite two resolver calls.
+    assert len(responses.calls) == 1
+
+
+@responses.activate
+def test_latest_ddragon_version_falls_back_on_error(monkeypatch):
+    monkeypatch.setattr(augmod, "_latest_version", None)
+    responses.add(responses.GET, _VERSIONS_URL, status=500)
+    assert latest_ddragon_version() == Config.DDRAGON_VERSION
+
+
+def test_champion_icon_url_defaults_to_resolved_latest(monkeypatch):
+    monkeypatch.setattr(augmod, "_latest_version", "16.12.1")
+    assert champion_icon_url("Lux") == (
+        "https://ddragon.leagueoflegends.com/cdn/16.12.1/img/champion/Lux.png"
     )
